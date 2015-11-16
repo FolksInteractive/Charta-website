@@ -94,15 +94,15 @@ module.exports = function(grunt) {
     copy: {
       theme: {
         expand: true,
-        cwd: 'src/assets/',
-        src: '**',
-        dest: '<%= config.dist %>/assets/'
+        cwd: 'src/assets',
+        src: 'stylesheets/main.css',
+        dest: '<%= config.dist %>/assets'
       },
       js: {
         expand: true,
-        cwd: 'src/assets/js/',
-        src: '**',
-        dest: '<%= config.dist %>/assets/js/'
+        cwd: 'src/assets',
+        src: 'js/*.js',
+        dest: '<%= config.dist %>/assets'
       }
     },
 

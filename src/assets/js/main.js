@@ -97,4 +97,20 @@ $(document).ready(function(){
     swiperSlider.slideNext();
   });
 
+  // Instagram Carousel
+  $('#homeInstagram .owl-carousel').owlCarousel({
+    margin: 20,
+    nav: true,
+    navText: ['<i class="icon-angle-left"></i>','<i class="icon-angle-right"></i>'],
+    autoplay: false,
+    autoplayHoverPause: true,
+    dots: false,
+    navRewind: false,
+    responsive:{
+      0:{ items:2 },
+      600:{ items:3 },
+      1000:{ items:4 },
+      1200:{ items:5 }
+    }
+  });
 });
