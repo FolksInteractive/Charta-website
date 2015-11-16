@@ -1,0 +1,149 @@
+section.hero {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+
+  &.parallax,
+  &.parallax .swiper-container{
+    visibility: visible;
+    .translate(0,0);
+    -webkit-backface-visibility: hidden;
+  }  
+
+  .portfolio-btn{
+    margin-top: 15px;
+    font-size: 16px;
+  }
+}
+
+
+// Slider Over
+.slider-over{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 100px;
+  width: 50%;
+  margin-left: -25%;
+  text-align: center;
+  color: #eee;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.15);
+
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  line-height: 1;
+
+  .animation-delay(500ms);
+
+  z-index: 20;
+}
+// Slider Caption
+.slider-caption{
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .5);
+  color: white;
+  padding: 15px 20px;
+}
+
+// Slider Arrows
+.slider-arrow {
+  position: absolute;
+  cursor: pointer;
+  z-index: 10;
+  top: 50%;
+  margin-top: -26px;
+  background-color: rgba(0,0,0,0.3);
+  width: 52px;
+  height: 52px;
+  border: 0;
+  -webkit-transition: background-color .3s ease-in-out;
+  -o-transition: background-color .3s ease-in-out;
+  transition: background-color .3s ease-in-out;
+  background-image: none;
+
+  &.left{
+    left: 0;
+    border-radius : 0 3px 3px 0;
+  }
+  &.right{
+    right: 0;
+    border-radius : 3px 0 0 3px;
+  }
+
+  &:hover{
+    background-color: rgba(0,0,0,0.6) !important;
+  }
+
+  i {
+    line-height: 50px;
+    width: 34px;
+    height: 52px;
+    color: #DDD;
+    color: rgba(255,255,255,0.8);
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+    font-size: 34px;
+    text-align: center;
+    margin-left: 7px;
+  }
+}
+
+
+// Swiper Slider
+.swiper-container {
+  position: relative;
+  width:100%;
+  height:100%;
+  margin: 0;
+
+  margin:0 auto;
+  position:relative;
+  overflow:hidden;
+  -webkit-backface-visibility:hidden;
+  -moz-backface-visibility:hidden;
+  -ms-backface-visibility:hidden;
+  -o-backface-visibility:hidden;
+  backface-visibility:hidden;
+  /* Fix of Webkit flickering */
+  z-index:1;
+}
+
+.swiper-wrapper {
+  position:relative;
+  width:100%;
+  -webkit-transition-property:-webkit-transform, left, top;
+  -webkit-transition-duration:0s;
+  -webkit-transform:translate3d(0px,0,0);
+  -webkit-transition-timing-function:ease;
+
+  -o-transition-property:-o-transform, left, top;
+  -o-transition-duration:0s;
+  -o-transform:translate3d(0px,0,0);
+  -o-transition-timing-function:ease;
+  -o-transform:translate(0px,0px);
+
+  transition-property:transform, left, top;
+  transition-duration:0s;
+  transform:translate3d(0px,0,0);
+  transition-timing-function:ease;
+
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+.swiper-slide { 
+  position: relative;
+  margin: 0;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+
+  float: left;
+}
+
+/* IE10 Windows Phone 8 Fixes */
+.swiper-wp8-horizontal { -ms-touch-action: pan-y; }
+.swiper-wp8-vertical { -ms-touch-action: pan-x; }

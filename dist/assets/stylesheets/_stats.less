@@ -1,0 +1,54 @@
+.stats {
+  font-size: 42px;
+  font-weight: 600;
+  font-family: @headings-font-family;
+
+  &.stats-small {
+    font-size: 28px;
+  }
+
+  &.stats-large {
+    font-size: 56px;
+  }
+
+  &.stats-xlarge {
+    font-size: 64px;
+    font-weight: 400;
+  }
+
+  &.stats-inherit {
+    font-size: inherit;
+    font-weight: inherit;
+  }
+
+  + h5 {
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 10px;
+
+    &:before {
+      display: block;
+      position: relative;
+      margin: 20px auto 25px auto;
+      content: '';
+      width: 15%;
+      border-top: 2px solid #444;
+      opacity: 0.9;
+    }
+  }
+
+  &.stats-small {
+    + h5 {
+      font-size: 13px;
+    }
+  }
+
+  &.stats-large,
+  &.stats-xlarge {
+    + h5 {
+      font-size: 15px;
+      font-weight: 300;
+    }
+  }
+}
