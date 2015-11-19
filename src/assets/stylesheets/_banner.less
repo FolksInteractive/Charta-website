@@ -1,0 +1,37 @@
+header.banner{
+  color: white;
+  height: @banner-height;
+
+  h1{
+    margin: 0;
+    line-height: @banner-height;
+    font-size: 40px;
+
+    small{
+      color: white;
+      font-size: 20px;
+      font-weight: 300;
+    }
+  }
+
+  h4{    
+    margin-top: 70px;
+    font-weight: 300;
+  }
+
+  h3{    
+    width: 500px;
+  }
+
+  &.blue{
+    background-image: url(../images/banner-blued.png);
+    background-position: center center;
+    background-size: cover;
+  }
+
+  .pull-right{
+    height: @banner-height;
+    line-height: @banner-height;
+    margin-left: 300px;
+  }
+}

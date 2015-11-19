@@ -73,7 +73,7 @@ module.exports = function(grunt) {
 
     assemble: {
       options: {
-        plugins: [ 'assemble-related-pages' ]
+        plugins: [ 'assemble-related-pages']
       },
       pages: {
         options: {

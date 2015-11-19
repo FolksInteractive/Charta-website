@@ -9735,6 +9735,37 @@ body {
   font-size: 15px;
   font-weight: 300;
 }
+header.banner {
+  color: white;
+  height: 252px;
+}
+header.banner h1 {
+  margin: 0;
+  line-height: 252px;
+  font-size: 40px;
+}
+header.banner h1 small {
+  color: white;
+  font-size: 20px;
+  font-weight: 300;
+}
+header.banner h4 {
+  margin-top: 70px;
+  font-weight: 300;
+}
+header.banner h3 {
+  width: 500px;
+}
+header.banner.blue {
+  background-image: url(../images/banner-blued.png);
+  background-position: center center;
+  background-size: cover;
+}
+header.banner .pull-right {
+  height: 252px;
+  line-height: 252px;
+  margin-left: 300px;
+}
 section.hero {
   position: relative;
   width: 100%;
