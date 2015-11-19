@@ -1,0 +1,101 @@
+section.history{
+
+  .timeline{
+    position: relative;
+    margin-top: 80px;
+  }
+
+
+  .timeline-border{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -71px;
+    width: 0;
+    border-left: 1px dashed #CCC;
+    height: 100%;
+  }
+
+  .entry{
+    padding-right: 140px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+  }
+
+  .entry-date-section{
+    margin: 50px 0 80px 0;
+    text-align: center;
+
+    &.first{
+      margin-top: 0;
+    }
+
+    span{
+      display: inline-block;
+      padding: 10px 15px;
+      background-color: #FFF;
+      border: 2px solid #EEE;
+      font-size: 18px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-family: 'Raleway', sans-serif;
+    }
+  }
+
+  .entry-image{
+    height: auto;
+    display: block;
+    position: relative;
+    width: 100%;
+    margin-bottom: 30px;
+
+    a{
+      display: block;
+      position: relative;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .entry-title{
+    h2{
+      margin: 0;
+      font-size: 20px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+  }
+
+  .entry-meta{
+    margin: 10px -10px -15px 0;
+    list-style: none;
+
+    li{
+      font-size: 13px;
+      line-height: 14px;
+      margin: 0 10px 15px 0;
+      color: #999;
+      font-family: 'Crete Round', serif;
+      font-style: italic;
+
+      i{
+        position: relative;
+        top: 1px;
+        font-size: 14px;
+        margin-right: 3px;
+      }
+    }
+
+    .entry-content{
+      .more-link{        
+        display: inline-block;
+        border-bottom: 1px solid #1ABC9C;
+        padding: 0 2px;
+        font-family: 'Crete Round', serif;
+        font-style: italic;
+      }
+    }
+  }
+}
