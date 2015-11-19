@@ -9866,11 +9866,63 @@ section.hero .portfolio-btn {
 .swiper-wp8-vertical {
   -ms-touch-action: pan-x;
 }
-section.welcome {
-  padding: 50px 0;
+section.welcome .container-fluid {
+  padding-left: 0px;
+  padding-right: 0px;
 }
-section.welcome .stats-row {
-  margin: 0 0 30px 0;
+section.welcome .container-fluid .col-left {
+  background-color: #F9F9F9;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+section.welcome .container-fluid .col-left .stats-row {
+  text-align: center;
+  max-width: 300px;
+}
+section.welcome .container-fluid .col-left .stats-row .stats + h5 {
+  max-width: 150px;
+  margin: auto auto;
+}
+section.welcome .container-fluid .col-left .stats-row .stats + h5:before {
+  content: none;
+}
+section.welcome .container-fluid .col-left .stats-row .first-row {
+  display: table-row;
+}
+section.welcome .container-fluid .col-left .stats-row .first-row .cell {
+  display: table-cell;
+}
+section.welcome .container-fluid .col-left .stats-row .first-row .cell.border-bottom {
+  padding-bottom: 30px;
+  border-bottom: solid 2px #CFCECF;
+}
+section.welcome .container-fluid .col-left .stats-row .first-row .cell.border-vertical {
+  width: 40px;
+  position: relative;
+}
+section.welcome .container-fluid .col-left .stats-row .first-row .cell.border-vertical div {
+  position: absolute;
+  top: 0px;
+  bottom: 20px;
+  background-color: #CFCECF;
+  width: 2px;
+  left: 19px;
+}
+section.welcome .container-fluid .col-right {
+  padding-top: 50px;
+  background-color: #FFFFFF;
+}
+@media (min-width: 992px) {
+  .stats-row {
+    float: right;
+    margin-right: 75px;
+  }
+}
+@media (max-width: 992px) {
+  .stats-row {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 section.home-clients {
   background-image: url('/assets/images/hero-bleued.png');
