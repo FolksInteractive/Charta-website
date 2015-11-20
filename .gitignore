@@ -16,3 +16,9 @@ npm-debug.log
 node_modules
 
 *.sublime-*
+dist/bower_components
+dist/*.html
+dist/*.css
+dist/*.js
+dist/*.xml
+dist/*.txt
