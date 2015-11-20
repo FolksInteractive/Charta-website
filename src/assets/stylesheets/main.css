@@ -9769,6 +9769,30 @@ header.banner .page-header {
   line-height: 252px;
   margin-left: 300px;
 }
+section .section-title {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: center;
+  color: #555555;
+  font-size: 20px;
+}
+section .section-title p {
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+}
+section .section-footer {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: center;
+  color: #555555;
+  font-size: 20px;
+}
+section .section-footer p {
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+}
 section.hero {
   position: relative;
   width: 100%;
@@ -10009,13 +10033,6 @@ section.explore .thumbnail .over.logo-rona-lachine {
   height: 77px;
   margin-left: -107px;
 }
-section.historique .historique-title {
-  margin: 50px auto 50px auto;
-  max-width: 750px;
-  text-align: center;
-  color: #555555;
-  font-size: 20px;
-}
 section.historique #historiquebody {
   margin-right: -140px;
 }
@@ -10104,13 +10121,6 @@ section.historique #historiquebody .emptybox div {
 }
 section.historique #historiquebody :last-child {
   padding-bottom: 10px;
-}
-section.historique .historique-footer {
-  margin: 50px auto 50px auto;
-  max-width: 750px;
-  color: #555555;
-  font-size: 20px;
-  text-align: center;
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   section.historique .entry {
