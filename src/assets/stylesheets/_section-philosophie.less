@@ -1,0 +1,110 @@
+section.philosophie {
+  .philosophie-body{
+    .thumnail{
+      position: relative;
+      display: block;
+      width: 400px;
+      height: 250px;
+      img{
+        width: 100%;
+        height: 100%;
+      }
+      .thumbnail-title{
+        position: absolute;
+        bottom: 0px;
+        height: 47px;
+        width: 100%;
+        background: rgba(0,0,0,0.30);
+        padding-left: 20px;
+        span{
+          color: #FFFFFF;
+          font-size: 16px;
+          display: block;
+          line-height: 47px;
+        }
+      }
+    }
+    .left-col{
+      .thumnail{
+        float: right;
+        margin-right: 90px;
+      }
+    }
+    .right-col{
+        margin-left: -50px;
+        h3{
+          font-size: 20px;
+          color: #444444;
+          line-height: 23px;
+          padding-top: 0px;
+          margin-top: 0px;
+          padding-bottom: 20px;
+        }
+       ul{
+         font-size: 16px;
+         color: #555555;
+         line-height: 18px;
+         li{
+           list-style: none;
+           margin-top: 14px;
+           margin-bottom: 14px;
+           background: url("../images/widget-link.png") left top no-repeat;
+           padding-left: 15px;
+         }
+       }
+    }
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  section.philosophie {
+    .philosophie-body {
+      .left-col {
+        text-align: center;
+        .thumnail {
+          float: none;
+          margin-right: 90px;
+        }
+      }
+      .right-col {
+        margin-left: 0px;
+      }
+    }
+  }
+}
+@media (max-width: 991px) {
+  section.philosophie {
+    .philosophie-body {
+      .thumnail{
+        width: 250px;
+        height: 156px;
+      }
+      .left-col{
+        .thumnail{
+          float: right;
+          margin-right: 5px;
+        }
+      }
+      .right-col {
+        margin-left: 0px;
+      }
+    }
+  }
+}
+@media (max-width: 767px) {
+  section.philosophie {
+    .philosophie-body {
+      .thumnail{
+        width: 250px;
+        height: 156px;
+      }
+      .left-col{
+        .thumnail{
+          float: none;
+          margin-left: auto;
+          margin-right: auto;
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
+}

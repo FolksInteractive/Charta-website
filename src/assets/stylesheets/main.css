@@ -10166,6 +10166,94 @@ section.historique #historiquebody :last-child {
     height: 0px;
   }
 }
+section.philosophie .philosophie-body .thumnail {
+  position: relative;
+  display: block;
+  width: 400px;
+  height: 250px;
+}
+section.philosophie .philosophie-body .thumnail img {
+  width: 100%;
+  height: 100%;
+}
+section.philosophie .philosophie-body .thumnail .thumbnail-title {
+  position: absolute;
+  bottom: 0px;
+  height: 47px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  padding-left: 20px;
+}
+section.philosophie .philosophie-body .thumnail .thumbnail-title span {
+  color: #FFFFFF;
+  font-size: 16px;
+  display: block;
+  line-height: 47px;
+}
+section.philosophie .philosophie-body .left-col .thumnail {
+  float: right;
+  margin-right: 90px;
+}
+section.philosophie .philosophie-body .right-col {
+  margin-left: -50px;
+}
+section.philosophie .philosophie-body .right-col h3 {
+  font-size: 20px;
+  color: #444444;
+  line-height: 23px;
+  padding-top: 0px;
+  margin-top: 0px;
+  padding-bottom: 20px;
+}
+section.philosophie .philosophie-body .right-col ul {
+  font-size: 16px;
+  color: #555555;
+  line-height: 18px;
+}
+section.philosophie .philosophie-body .right-col ul li {
+  list-style: none;
+  margin-top: 14px;
+  margin-bottom: 14px;
+  background: url("../images/widget-link.png") left top no-repeat;
+  padding-left: 15px;
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  section.philosophie .philosophie-body .left-col {
+    text-align: center;
+  }
+  section.philosophie .philosophie-body .left-col .thumnail {
+    float: none;
+    margin-right: 90px;
+  }
+  section.philosophie .philosophie-body .right-col {
+    margin-left: 0px;
+  }
+}
+@media (max-width: 991px) {
+  section.philosophie .philosophie-body .thumnail {
+    width: 250px;
+    height: 156px;
+  }
+  section.philosophie .philosophie-body .left-col .thumnail {
+    float: right;
+    margin-right: 5px;
+  }
+  section.philosophie .philosophie-body .right-col {
+    margin-left: 0px;
+  }
+}
+@media (max-width: 767px) {
+  section.philosophie .philosophie-body .thumnail {
+    width: 250px;
+    height: 156px;
+  }
+  section.philosophie .philosophie-body .left-col .thumnail {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+  }
+}
 section.jointeam {
   background-color: #f8f8f8;
   padding-top: 40px;
