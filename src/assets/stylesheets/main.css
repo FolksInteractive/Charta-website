@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:400,300,700);
-@import url(https://fonts.googleapis.com/css?family=Raleway:500, 700);
+@import url(https://fonts.googleapis.com/css?family=Raleway:500,700);
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif;
@@ -9903,6 +9903,7 @@ section.welcome .container-fluid {
 }
 section.welcome .container-fluid .col-left {
   background-color: #F9F9F9;
+  color: #999999;
   padding-top: 70px;
   padding-bottom: 70px;
 }
@@ -9925,7 +9926,7 @@ section.welcome .container-fluid .col-left .stats-row .first-row .cell {
 }
 section.welcome .container-fluid .col-left .stats-row .first-row .cell.border-bottom {
   padding-bottom: 30px;
-  border-bottom: solid 2px #CFCECF;
+  border-bottom: solid 1px #CFCECF;
 }
 section.welcome .container-fluid .col-left .stats-row .first-row .cell.border-vertical {
   width: 40px;
@@ -9936,8 +9937,8 @@ section.welcome .container-fluid .col-left .stats-row .first-row .cell.border-ve
   top: 0px;
   bottom: 20px;
   background-color: #CFCECF;
-  width: 2px;
-  left: 19px;
+  width: 1px;
+  left: 19.5px;
 }
 section.welcome .container-fluid .col-right {
   padding-top: 50px;
@@ -10058,4 +10059,220 @@ footer .contact-col h1 {
 footer .copyright {
   padding-top: 60px;
   color: #999;
+}
+section.historique .historique-title {
+  margin: 50px auto 50px auto;
+  max-width: 750px;
+  text-align: center;
+  color: #555555;
+  font-size: 20px;
+}
+section.historique #historiquebody {
+  margin-right: -140px;
+}
+section.historique #historiquebody .timeline-border {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -71px;
+  width: 0;
+  height: 100%;
+}
+section.historique #historiquebody .timeline-border div {
+  position: absolute;
+  top: 35px;
+  bottom: 0px;
+  width: 100%;
+  border-left: 1px dashed #CCC;
+}
+section.historique #historiquebody .entry {
+  width: 500px;
+  margin-right: 140px;
+  text-align: right;
+  padding-bottom: 50px;
+}
+section.historique #historiquebody .entry .entry-title h2 {
+  color: #444444;
+  font-size: 32px;
+  font-family: "Raleway";
+}
+section.historique #historiquebody .entry .entry-content {
+  font-size: 16px;
+}
+section.historique #historiquebody .entry .entry-timeline {
+  display: none;
+  position: absolute;
+  border: 2px solid #CCC;
+  background-color: #FFF;
+  padding-top: 0;
+  text-indent: -9999px;
+  top: 35px;
+  left: auto;
+  right: -76px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  font-size: 26px;
+  font-weight: bold;
+  color: #AAA;
+  text-align: center;
+  line-height: 1;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+section.historique #historiquebody .entry .entry-timeline div.timeline-divider {
+  position: absolute;
+  top: 4px;
+  left: -58px;
+  width: 50px;
+  height: 0;
+  border-top: 1px dashed #CCC;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+section.historique #historiquebody .entry .entry-timeline span {
+  display: block;
+  margin-top: 3px;
+  font-size: 13px;
+  font-weight: normal;
+}
+section.historique #historiquebody .entry.alt {
+  text-align: left;
+}
+section.historique #historiquebody .alt .entry-timeline {
+  right: auto;
+  left: -77px;
+}
+section.historique #historiquebody .alt .entry-timeline div.timeline-divider {
+  left: auto;
+  right: -58px;
+}
+section.historique #historiquebody .emptybox div {
+  display: block;
+  height: 80px;
+}
+section.historique #historiquebody :last-child {
+  padding-bottom: 10px;
+}
+section.historique .historique-footer {
+  margin: 50px auto 50px auto;
+  max-width: 750px;
+  color: #555555;
+  font-size: 20px;
+  text-align: center;
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  section.historique .entry {
+    width: 400px !important;
+  }
+  section.historique .entry.entry-date-section {
+    width: 100% !important;
+  }
+}
+@media (max-width: 991px) {
+  section.historique .entry {
+    width: 290px !important;
+  }
+  section.historique .entry.entry-date-section {
+    width: 100% !important;
+  }
+}
+@media (max-width: 767px) {
+  section.historique #historiquebody {
+    margin-right: 0 !important;
+  }
+  section.historique #historiquebody .entry {
+    float: none !important;
+    width: 100% !important;
+    margin-right: 0 !important;
+    border-right: 0 !important;
+    text-align: left;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  section.historique #historiquebody .timeline-border {
+    display: none;
+  }
+  section.historique #historiquebody .entry-timeline {
+    display: none !important;
+  }
+  section.historique #historiquebody .emptybox {
+    display: none;
+  }
+  section.historique #historiquebody .emptybox div {
+    display: block;
+    height: 0px;
+  }
+}
+section.jointeam {
+  background-color: #f8f8f8;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+section.jointeam .left-col h3,
+section.jointeam .right-col h3 {
+  font-size: 32px;
+  color: #999999;
+  max-width: 430px;
+}
+section.jointeam .left-col p,
+section.jointeam .right-col p {
+  font-size: 16px;
+  color: #555555;
+  max-width: 430px;
+}
+section.jointeam .left-col button,
+section.jointeam .right-col button {
+  background-color: #208BC4;
+}
+section.jointeam .left-col {
+  text-align: right;
+  border-right: solid #dededf 1px;
+  padding-right: 50px;
+}
+section.jointeam .left-col h3 {
+  margin-left: auto;
+  margin-right: 0px;
+}
+section.jointeam .left-col p {
+  margin-left: auto;
+  margin-right: 0px;
+}
+section.jointeam .right-col {
+  padding-left: 50px;
+  text-align: left;
+}
+@media (max-width: 991px) {
+  section.jointeam .left-col h3,
+  section.jointeam .right-col h3 {
+    font-size: 22px;
+  }
+  section.jointeam .left-col p,
+  section.jointeam .right-col p {
+    font-size: 14px;
+  }
+}
+@media (max-width: 767px) {
+  section.jointeam .left-col,
+  section.jointeam .right-col {
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  section.jointeam .left-col h3,
+  section.jointeam .right-col h3 {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  section.jointeam .left-col p,
+  section.jointeam .right-col p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  section.jointeam .left-col {
+    border-right: none;
+  }
 }

@@ -1,0 +1,152 @@
+section.historique {
+  .historique-title{
+    margin: 50px auto 50px auto;
+    max-width: 750px;
+    text-align: center;
+    color:#555555;
+    font-size: 20px;
+  }
+  #historiquebody {
+    margin-right: -140px;
+    .timeline-border {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      margin-left: -71px;
+      width: 0;
+      height: 100%;
+      div{
+        position: absolute;
+        top:35px;
+        bottom: 0px;
+        width: 100%;
+        border-left: 1px dashed #CCC;
+      }
+    }
+
+    .entry {
+      width: 500px;
+      margin-right: 140px;
+      text-align: right;
+      padding-bottom: 50px;
+
+      .entry-title h2 {
+        color: #444444;
+        font-size: 32px;
+        font-family: "Raleway";
+      }
+
+      .entry-content{
+        font-size: 16px;
+      }
+
+      .entry-timeline {
+        display: none;
+        position: absolute;
+        border: 2px solid #CCC;
+        background-color: #FFF;
+        padding-top: 0;
+        text-indent: -9999px;
+        top: 35px;
+        left: auto;
+        right: -76px;
+        width: 13px;
+        height: 13px;
+        border-radius: 50%;
+        font-size: 26px;
+        font-weight: bold;
+        color: #AAA;
+        text-align: center;
+        line-height: 1;
+        -webkit-transition: all .3s ease-in-out;
+        -o-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out;
+
+        div.timeline-divider {
+          position: absolute;
+          top: 4px;
+          left: -58px;
+          width: 50px;
+          height: 0;
+          border-top: 1px dashed #CCC;
+          -webkit-transition: all .3s ease-in-out;
+          -o-transition: all .3s ease-in-out;
+          transition: all .3s ease-in-out;
+        }
+        span {
+          display: block;
+          margin-top: 3px;
+          font-size: 13px;
+          font-weight: normal;
+        }
+      }
+    }
+    .entry.alt{
+      text-align: left;
+    }
+    .alt .entry-timeline {
+      right: auto;
+      left: -77px;
+    }
+    .alt .entry-timeline div.timeline-divider {
+      left: auto;
+      right: -58px;
+    }
+    .emptybox div{
+      display: block;
+      height: 80px;
+    }
+    :last-child{
+      padding-bottom: 10px;
+    }
+  }
+  .historique-footer{
+    margin: 50px auto 50px auto;
+    max-width: 750px;
+    color:#555555;
+    font-size: 20px;
+    text-align: center;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  section.historique {
+    .entry { width: 400px !important; }
+    .entry.entry-date-section { width: 100% !important; }
+  }
+}
+@media (max-width: 991px) {
+  section.historique {
+    .entry { width: 290px !important; }
+    .entry.entry-date-section { width: 100% !important; }
+  }
+}
+@media (max-width: 767px) {
+  section.historique {
+    #historiquebody{
+      margin-right: 0 !important;
+      .entry {
+        float: none !important;
+        width: 100% !important;
+        margin-right: 0 !important;
+        border-right: 0 !important;
+        text-align: left;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+      .timeline-border {
+        display: none;
+      }
+      .entry-timeline{
+        display: none !important;
+      }
+      .emptybox{
+        display: none;
+      }
+      .emptybox div{
+        display: block;
+        height: 0px;
+      }
+    }
+  }
+}
