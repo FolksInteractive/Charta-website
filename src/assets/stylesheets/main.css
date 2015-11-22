@@ -9781,6 +9781,9 @@ section .section-title p {
   margin-left: auto;
   margin-right: auto;
 }
+section .section-title.light p {
+  font-weight: 300;
+}
 section .section-footer {
   margin-top: 50px;
   margin-bottom: 50px;
@@ -10252,6 +10255,43 @@ section.philosophie .philosophie-body .right-col ul li {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 30px;
+  }
+}
+section.realisation-projets .caption {
+  font-size: smaller;
+}
+section.realisation-projets .btn-group {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+section.realisation-projets .filters {
+  margin: 0 0 30px 0;
+}
+section.realisation-projets .portfolio .portfolio-item {
+  width: 100%;
+  margin: 0 10px 20px 10px;
+}
+section.realisation-projets .portfolio .portfolio-image img {
+  width: 100%;
+}
+section.realisation-projets .portfolio .portfolio-desc p {
+  color: #777777;
+  font-weight: 300;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  section.realisation-projets .portfolio .portfolio-item {
+    width: 335px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  section.realisation-projets .portfolio .portfolio-item {
+    width: 445px;
+  }
+}
+@media (min-width: 1200px) {
+  section.realisation-projets .portfolio .portfolio-item {
+    width: 545px;
   }
 }
 section.jointeam {
