@@ -26,13 +26,13 @@ $(document).ready(function () {
 
   setTimeout( function(){
     timelineEntries();
-  }, 1500 );
+  }, 500 );
 
   $(window).resize(function() {
     $container.isotope('layout');
     var t = setTimeout( function(){
       timelineEntries();
-    }, 1500 );
+    }, 500 );
   });
 
 });
