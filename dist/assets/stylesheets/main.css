@@ -9805,6 +9805,26 @@ section .section-footer p {
 section.section-title.bg {
   background-color: #f8f8f8;
 }
+section .charta-list h3 {
+  font-size: 20px;
+  color: #444444;
+  line-height: 23px;
+  padding-top: 0px;
+  margin-top: 0px;
+  padding-bottom: 20px;
+}
+section .charta-list ul {
+  font-size: 16px;
+  color: #555555;
+  line-height: 18px;
+}
+section .charta-list ul li {
+  list-style: none;
+  margin-top: 14px;
+  margin-bottom: 14px;
+  background: url("../images/widget-link.png") left top no-repeat;
+  padding-left: 15px;
+}
 section.hero {
   position: relative;
   width: 100%;
@@ -10212,26 +10232,6 @@ section.philosophie .philosophie-body .left-col .thumnail {
 section.philosophie .philosophie-body .right-col {
   margin-left: -50px;
 }
-section.philosophie .philosophie-body .right-col h3 {
-  font-size: 20px;
-  color: #444444;
-  line-height: 23px;
-  padding-top: 0px;
-  margin-top: 0px;
-  padding-bottom: 20px;
-}
-section.philosophie .philosophie-body .right-col ul {
-  font-size: 16px;
-  color: #555555;
-  line-height: 18px;
-}
-section.philosophie .philosophie-body .right-col ul li {
-  list-style: none;
-  margin-top: 14px;
-  margin-bottom: 14px;
-  background: url("../images/widget-link.png") left top no-repeat;
-  padding-left: 15px;
-}
 @media (min-width: 992px) and (max-width: 1199px) {
   section.philosophie .philosophie-body .left-col {
     text-align: center;
@@ -10431,6 +10431,105 @@ section.certification .certification-row .desc p.certitication-link {
 }
 section.certification .certification-row .desc :first-child {
   margin-top: 0px;
+}
+section.realisationidees .iddes-header {
+  display: block;
+  height: 45px;
+  width: 100%;
+  background-color: #f8f8f8;
+}
+section.realisationidees .idees-body {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+section.realisationidees .idees-body .idees-img {
+  position: relative;
+  padding: 0px;
+}
+section.realisationidees .idees-body .idees-img img {
+  width: 100%;
+  height: auto;
+}
+section.realisationidees .idees-body .idees-img .idees-img-label {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background: rgba(0, 0, 0, 0.5);
+}
+section.realisationidees .idees-body .idees-img .idees-img-label .label-cotainer {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+section.realisationidees .idees-body .idees-img .idees-img-label .label-cotainer p {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 40px;
+  color: #FFFFFF;
+  line-height: 47px;
+}
+section.realisationidees .idees-body .idees-desc {
+  padding-top: 55px;
+  padding-left: 50px;
+}
+section.realisationidees .idees-body .idees-desc ul {
+  padding-left: 20px;
+}
+section.realisationidees .idees-body .idees-desc p {
+  padding-top: 16px;
+  font-size: 16px;
+  color: #555555;
+  line-height: 18px;
+}
+section.realisationidees .idees-body .idees-desc p.source {
+  font-weight: bolder;
+}
+section.realisationidees .idees-footer {
+  position: relative;
+}
+section.realisationidees .idees-footer .footer-img-row div {
+  padding: 0px;
+}
+section.realisationidees .idees-footer .footer-img-row div img {
+  width: 100%;
+  height: auto;
+}
+section.realisationidees .idees-footer .footer-label {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  background: rgba(255, 255, 255, 0.85);
+}
+section.realisationidees .idees-footer .footer-label div {
+  display: table;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+section.realisationidees .idees-footer .footer-label div p {
+  display: table-cell;
+  vertical-align: middle;
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  section.realisationidees .idees-body .idees-desc {
+    padding-top: 20px;
+  }
+}
+@media (max-width: 991px) {
+  section.realisationidees .idees-body .idees-img {
+    width: 400px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+  }
+  section.realisationidees .idees-footer {
+    width: 100%;
+  }
 }
 section.realisation-projets .caption {
   font-size: smaller;

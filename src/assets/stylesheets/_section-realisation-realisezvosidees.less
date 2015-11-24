@@ -1,0 +1,123 @@
+section.realisationidees {
+  .iddes-header {
+    display: block;
+    height: 45px;
+    width: 100%;
+    background-color: #f8f8f8;
+  }
+  .idees-body {
+    padding-left: 0px;
+    padding-right: 0px;
+    .idees-img {
+      position: relative;
+      padding: 0px;
+      img {
+        width: 100%;
+        height: auto;
+      }
+      .idees-img-label {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        left: 0px;
+        background: rgba(0, 0, 0, 0.5);
+        .label-cotainer {
+          display: table;
+          width: 100%;
+          height: 100%;
+          p {
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+            font-size: 40px;
+            color: #FFFFFF;
+            line-height: 47px;
+          }
+        }
+      }
+    }
+    .idees-desc {
+      padding-top: 55px;
+      padding-left: 50px;
+      ul {
+        padding-left: 20px;
+      }
+      p {
+        padding-top: 16px;
+        font-size: 16px;
+        color: #555555;
+        line-height: 18px;
+      }
+      p.source {
+        font-weight: bolder;
+      }
+    }
+  }
+  .idees-footer {
+    position: relative;
+    .footer-img-row {
+      div {
+        padding: 0px;
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+    .footer-label {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0px;
+      background: rgba(255, 255, 255, 0.85);
+      div {
+        display: table;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        p {
+          display: table-cell;
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  section.realisationidees {
+    .idees-body {
+      .idees-desc {
+        padding-top: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  section.realisationidees {
+    .idees-body {
+      .idees-img {
+        width: 400px;
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+      }
+    }
+    .idees-footer {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  section.realisationidees {
+    .idees-body {
+      .idees-img {
+
+      }
+    }
+  }
+}
