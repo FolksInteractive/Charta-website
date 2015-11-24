@@ -47,7 +47,7 @@ $(document).ready(function(){
     var $heroOver = $hero.find('.slider-over');
     $heroOver.css({
       position: 'absolute',
-      top: '50%',
+      top: '45%',
       marginTop: - ($heroOver.outerHeight()/2)+'px'
     });
   }

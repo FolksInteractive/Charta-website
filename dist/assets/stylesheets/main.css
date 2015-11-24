@@ -1,5 +1,8 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700);
-@import url(https://fonts.googleapis.com/css?family=Raleway:500,700);
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400,300,700);
+@import url(https://fonts.googleapis.com/css?family=Raleway:100,300,500,700);
+p {
+  font-size: 16px;
+}
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif;
@@ -6535,7 +6538,7 @@ body {
   margin-top: 100px;
 }
 .navbar .container-fluid {
-  margin: 0 25px;
+  margin: 0 25px 0 5px;
 }
 .navbar-brand {
   padding-top: 16px;
@@ -6543,7 +6546,7 @@ body {
 }
 .navbar-reach {
   float: left;
-  padding: 30px 25px;
+  padding: 28px 25px;
   font-size: 18px;
   line-height: 20px;
   height: 100px;
@@ -6555,17 +6558,27 @@ body {
   font-size: 14px;
   font-weight: 300;
   text-transform: uppercase;
+  color: #999;
+  padding-bottom: 5px;
 }
 .navbar-reach phone {
   font-weight: 700;
   font-size: 20px;
+  color: #555;
+  padding-top: 5px;
 }
 .navbar-default {
   border-bottom: 1px solid #eee;
 }
 .navbar-default .navbar-nav > li > a {
   text-transform: uppercase;
-  font-size: 13px;
+  font-size: 14px;
+}
+.navbar-default .navbar-nav > li > a:hover {
+  color: #208bc4;
+}
+.navbar-default .navbar-nav > .active > a {
+  font-weight: 700;
 }
 .navbar-nav ul.menu-pos-invert,
 .navbar-nav li .mega-menu-content.menu-pos-invert {
@@ -6578,10 +6591,11 @@ body {
   width: 220px;
   background-color: #FFF;
   box-shadow: 0px 13px 42px 11px rgba(0, 0, 0, 0.05);
-  border-top: 2px solid #208bc4;
+  border-top: 3px solid #208bc4;
+  padding-bottom: 10px;
   height: auto;
   z-index: 199;
-  top: 100px;
+  top: 80px;
   left: 0;
   margin: 0;
 }
@@ -6592,7 +6606,7 @@ body {
 .navbar-nav ul a {
   display: block;
   padding: 10px 20px;
-  font-size: 12px;
+  font-size: 14px;
   height: auto !important;
   line-height: 22px !important;
   color: #666 !important;
@@ -6606,7 +6620,6 @@ body {
 }
 .navbar-nav ul li:hover > a {
   text-decoration: none;
-  padding-left: 28px;
   color: #208bc4 !important;
 }
 @font-face {
@@ -9694,9 +9707,10 @@ body {
   left: 100%;
 }
 .stats {
-  font-size: 42px;
-  font-weight: 600;
+  font-size: 60px;
+  font-weight: 100;
   font-family: inherit;
+  line-height: 60px;
 }
 .stats.stats-small {
   font-size: 28px;
@@ -9716,7 +9730,6 @@ body {
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 1px;
-  margin-top: 10px;
 }
 .stats + h5:before {
   display: block;
@@ -9840,8 +9853,9 @@ section.hero.parallax .swiper-container {
   -webkit-backface-visibility: hidden;
 }
 section.hero .portfolio-btn {
-  margin-top: 15px;
+  margin-top: 12px;
   font-size: 16px;
+  padding: 10px 20px 14px 20px;
 }
 .slider-over {
   position: absolute;
@@ -9851,8 +9865,8 @@ section.hero .portfolio-btn {
   width: 50%;
   margin-left: -25%;
   text-align: center;
-  color: #eee;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+  color: #fff;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
   letter-spacing: 2px;
   text-transform: uppercase;
   line-height: 1;
@@ -9868,11 +9882,14 @@ section.hero .portfolio-btn {
   color: white;
   padding: 15px 20px;
 }
+.slider-caption .text-right h5 {
+  font-weight: 300;
+}
 .slider-arrow {
   position: absolute;
   cursor: pointer;
   z-index: 10;
-  top: 50%;
+  top: 45%;
   margin-top: -26px;
   background-color: rgba(0, 0, 0, 0.3);
   width: 52px;
@@ -9962,20 +9979,23 @@ section.welcome .container-fluid {
 }
 section.welcome .container-fluid .col-left {
   background-color: #F9F9F9;
-  color: #999999;
-  padding-top: 70px;
+  color: #777;
+  padding-top: 60px;
   padding-bottom: 70px;
 }
 section.welcome .container-fluid .col-left .stats-row {
   text-align: center;
   max-width: 300px;
 }
+section.welcome .container-fluid .col-left .stats-row .more {
+  margin: 0;
+}
 section.welcome .container-fluid .col-left .stats-row .stats {
   font-family: "Raleway";
 }
 section.welcome .container-fluid .col-left .stats-row .stats + h5 {
   max-width: 150px;
-  margin: auto auto;
+  margin: 15px auto 0 auto;
 }
 section.welcome .container-fluid .col-left .stats-row .stats + h5:before {
   content: none;
@@ -10003,8 +10023,18 @@ section.welcome .container-fluid .col-left .stats-row .first-row .cell.border-ve
   left: 19.5px;
 }
 section.welcome .container-fluid .col-right {
-  padding-top: 50px;
+  padding-top: 30px;
   background-color: #FFFFFF;
+}
+section.welcome .container-fluid .col-right h1,
+section.welcome .container-fluid .col-right h4 {
+  color: #444;
+  font-weight: 700;
+}
+section.welcome .container-fluid .col-right p {
+  padding-top: 10px;
+  color: #777;
+  font-size: 15px;
 }
 @media (min-width: 992px) {
   .stats-row {
@@ -10027,16 +10057,33 @@ section.home-clients ul li {
   padding: 20px;
 }
 section.home-clients p {
-  font-size: 16px;
-  width: 500px;
+  font-size: 18px;
+  max-width: 640px;
   display: block;
   margin-left: auto;
   margin-right: auto;
   padding: 30px 0;
 }
+section.home-clients .btn {
+  padding: 20px 40px;
+  border-radius: 40px;
+  margin-top: 20px;
+}
+section.home-instagram h2 {
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  color: #777777;
+  font-weight: 300;
+}
+section.home-instagram h4 {
+  padding-bottom: 30px;
+}
+section.home-instagram h4 a:hover {
+  text-decoration: none;
+}
 section.home-instagram .container {
   padding: 50px 0;
-  border-top: 2px solid #ccc;
+  border-top: 1px dashed #dededf;
 }
 section.explore {
   padding: 50px 0;
@@ -10047,8 +10094,29 @@ section.explore h2 {
   color: #777777;
   font-weight: 300;
 }
+section.explore h3 {
+  font-weight: 700;
+}
+section.explore .desc {
+  font-weight: 100;
+  color: #999;
+  padding: 5px 0 10px 0;
+}
+section.explore .learn-more {
+  background: #208bc4;
+  margin: auto;
+  padding: 6px 12px;
+  display: inline;
+  text-transform: uppercase;
+  font-size: 11px;
+  color: #fff;
+  border-radius: 12px;
+}
 section.explore .thumbnail {
   border-width: 0;
+}
+section.explore .thumbnail:hover {
+  text-decoration: none;
 }
 section.explore .thumbnail .over {
   position: absolute;
