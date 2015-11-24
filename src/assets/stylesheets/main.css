@@ -10395,6 +10395,43 @@ section.equipe .avator-container .avator-desc {
   color: #555555;
   line-height: 18px;
 }
+section.certification {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+section.certification .certification-row {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+section.certification .certification-row .logo {
+  text-align: center;
+}
+section.certification .certification-row .logo p {
+  font-size: 24px;
+  color: #CCC;
+  padding-top: 15px;
+  padding-bottom: 5px;
+}
+section.certification .certification-row .desc h3 {
+  font-size: 20px;
+  color: #444444;
+  line-height: 23px;
+}
+section.certification .certification-row .desc p.content {
+  font-size: 16px;
+  color: #555555;
+  line-height: 18px;
+  padding-bottom: 8px;
+}
+section.certification .certification-row .desc p.certitication-link {
+  font-size: 14px;
+  color: #555555;
+  line-height: 18px;
+  word-wrap: break-word;
+}
+section.certification .certification-row .desc :first-child {
+  margin-top: 0px;
+}
 section.realisation-projets .caption {
   font-size: smaller;
 }
