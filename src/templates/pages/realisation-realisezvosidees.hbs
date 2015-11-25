@@ -8,8 +8,8 @@ parent:
 
 
 <section id="realisationidees" class="realisationidees" xmlns="http://www.w3.org/1999/html">
-    <div class="container-fluid iddes-header">
-    </div>
+    <!--<div class="container-fluid iddes-header">
+    </div>-->
     <div class="container idees-body">
         <div class="col-md-6 idees-img">
             <img src="assets/images/college-saint-anne.jpg">
@@ -34,7 +34,7 @@ parent:
                 Avec notre équipe chevronnée et attentionnée, nous pourrons réaliser votre projet .
             </p>
             <p class="source">
-                Nous vous invitons à <a href="#">visiter nos réalisations.</a>
+                Nous vous invitons à <a href="{{relative page.dest "dist/realisation-projets.html"}}">visiter nos réalisations.</a>
             </p>
         </div>
     </div>
@@ -56,7 +56,7 @@ parent:
         <div class="row footer-label">
             <div>
                 <p>
-                    <button class="btn btn-primary btn-lg">VISITEZ NOS RÉALISATIONS</button>
+                    <a href="{{relative page.dest "dist/realisation-projets.html"}}" class="btn btn-primary btn-lg">VISITEZ NOS RÉALISATIONS</a>
                 </p>
             </div>
         </div>

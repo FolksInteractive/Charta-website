@@ -37,11 +37,20 @@ section.equipe {
       height: 25px;
       margin: 10px auto 0px auto;
       border-radius:25px;
-      background-color: #208bc4;
+      background-color: @brand-primary;
+
+      &:hover {
+        background-color: @blue-dark;
+      }
+
       a{
         color: #FFFFFF;
         line-height: 25px;
         font-size: 14px;
+
+        &:hover {
+          text-decoration: none;
+        }
       }
     }
     .avator-name{
@@ -53,7 +62,7 @@ section.equipe {
     }
     .avator-desc{
       margin-top: 25px;
-      margin-bottom: 60px;
+      margin-bottom: 30px;
       font-size: 16px;
       color: #555555;
       line-height: 18px;

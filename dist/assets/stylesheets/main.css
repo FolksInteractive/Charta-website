@@ -1,8 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:300,400,300,700);
 @import url(https://fonts.googleapis.com/css?family=Raleway:100,300,500,700);
-p {
-  font-size: 16px;
-}
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif;
@@ -6168,6 +6165,21 @@ button.close {
     display: none !important;
   }
 }
+body {
+  overflow-x: hidden;
+}
+p {
+  font-size: 16px;
+  color: #555;
+  line-height: 26px;
+}
+ul {
+  margin-left: 0px;
+  padding-left: 20px;
+}
+a:hover {
+  text-decoration: none;
+}
 .btn.bordered {
   background-color: transparent;
   border-width: 2px;
@@ -9785,8 +9797,7 @@ header.banner .page-header {
 section.section-title,
 section .section-title {
   padding-top: 50px;
-  padding-bottom: 30px;
-  margin-bottom: 40px;
+  padding-bottom: 50px;
   text-align: center;
   color: #555555;
   font-size: 20px;
@@ -9796,10 +9807,17 @@ section .section-title p {
   max-width: 750px;
   margin-left: auto;
   margin-right: auto;
+  font-size: 20px;
+  font-weight: 100;
 }
 section.section-title.light p,
 section .section-title.light p {
   font-weight: 300;
+}
+section.section-title .caption,
+section .section-title .caption {
+  font-size: 16px;
+  color: #999;
 }
 section.section-footer,
 section .section-footer {
@@ -9814,6 +9832,8 @@ section .section-footer p {
   max-width: 750px;
   margin-left: auto;
   margin-right: auto;
+  font-size: 20px;
+  font-weight: 100;
 }
 section.section-title.bg {
   background-color: #f8f8f8;
@@ -9873,6 +9893,13 @@ section.hero .portfolio-btn {
   -webkit-animation-delay: 500ms;
   animation-delay: 500ms;
   z-index: 20;
+}
+.slider-over h3 {
+  font-size: 20px;
+  text-transform: none;
+}
+.slider-over h1 {
+  font-size: 40px;
 }
 .slider-caption {
   position: absolute;
@@ -9976,10 +10003,11 @@ section.hero .portfolio-btn {
 section.welcome .container-fluid {
   padding-left: 0px;
   padding-right: 0px;
+  background-color: #F9F9F9;
 }
 section.welcome .container-fluid .col-left {
   background-color: #F9F9F9;
-  color: #777;
+  color: #555;
   padding-top: 60px;
   padding-bottom: 70px;
 }
@@ -10023,7 +10051,7 @@ section.welcome .container-fluid .col-left .stats-row .first-row .cell.border-ve
   left: 19.5px;
 }
 section.welcome .container-fluid .col-right {
-  padding-top: 30px;
+  padding: 30px 0 40px;
   background-color: #FFFFFF;
 }
 section.welcome .container-fluid .col-right h1,
@@ -10033,8 +10061,6 @@ section.welcome .container-fluid .col-right h4 {
 }
 section.welcome .container-fluid .col-right p {
   padding-top: 10px;
-  color: #777;
-  font-size: 15px;
 }
 @media (min-width: 992px) {
   .stats-row {
@@ -10063,6 +10089,7 @@ section.home-clients p {
   margin-left: auto;
   margin-right: auto;
   padding: 30px 0;
+  color: #fff;
 }
 section.home-clients .btn {
   padding: 20px 40px;
@@ -10341,8 +10368,13 @@ section.advantagescharta .charta-title {
   background-color: #F8F8F8;
   padding: 36px;
   text-align: center;
-  color: #555555;
+}
+section.advantagescharta .charta-title a {
+  font-weight: 400;
+}
+section.advantagescharta .charta-title p {
   font-size: 20px;
+  font-weight: 100;
 }
 section.advantagescharta .chartacontainer {
   padding-top: 45px;
@@ -10364,16 +10396,17 @@ section.advantagescharta .chartacontainer .charta-item .charta-item-step {
 }
 section.advantagescharta .chartacontainer .charta-item .charta-item-step .step-label {
   display: block;
-  width: 37px;
-  height: 37px;
-  line-height: 37px;
+  width: 40px;
+  height: 40px;
+  line-height: 38px;
   background-color: #208BC4;
   border-radius: 19px;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
   color: #FFFFFF;
-  font-size: 24px;
+  font-size: 20px;
+  font-weight: 400;
 }
 section.advantagescharta .chartacontainer .charta-item .charta-item-step .divider {
   position: absolute;
@@ -10387,15 +10420,15 @@ section.advantagescharta .chartacontainer .charta-item .charta-item-body {
   margin-left: 60px;
   padding-bottom: 30px;
 }
-section.advantagescharta .chartacontainer .charta-item .charta-item-body h3 {
+section.advantagescharta .chartacontainer .charta-item .charta-item-body h2 {
   font-size: 24px;
   color: #444444;
   line-height: 28px;
+  padding-top: 5px;
 }
 section.advantagescharta .chartacontainer .charta-item .charta-item-body p {
   font-size: 16px;
   color: #555555;
-  line-height: 18px;
 }
 section.advantagescharta .chartacontainer :last-child .charta-item-step .divider {
   display: none;
@@ -10444,10 +10477,16 @@ section.equipe .avator-container .avator-linkedln {
   border-radius: 25px;
   background-color: #208bc4;
 }
+section.equipe .avator-container .avator-linkedln:hover {
+  background-color: #025480;
+}
 section.equipe .avator-container .avator-linkedln a {
   color: #FFFFFF;
   line-height: 25px;
   font-size: 14px;
+}
+section.equipe .avator-container .avator-linkedln a:hover {
+  text-decoration: none;
 }
 section.equipe .avator-container .avator-name {
   margin: 30px auto 0px auto;
@@ -10458,7 +10497,7 @@ section.equipe .avator-container .avator-name {
 }
 section.equipe .avator-container .avator-desc {
   margin-top: 25px;
-  margin-bottom: 60px;
+  margin-bottom: 30px;
   font-size: 16px;
   color: #555555;
   line-height: 18px;
@@ -10500,6 +10539,9 @@ section.certification .certification-row .desc p.certitication-link {
 section.certification .certification-row .desc :first-child {
   margin-top: 0px;
 }
+section.realisationidees {
+  margin: 50px 0;
+}
 section.realisationidees .iddes-header {
   display: block;
   height: 45px;
@@ -10509,6 +10551,7 @@ section.realisationidees .iddes-header {
 section.realisationidees .idees-body {
   padding-left: 0px;
   padding-right: 0px;
+  margin-bottom: 50px;
 }
 section.realisationidees .idees-body .idees-img {
   position: relative;
@@ -10599,8 +10642,12 @@ section.realisationidees .idees-footer .footer-label div p {
     width: 100%;
   }
 }
+section.realisation-projets .section-title {
+  padding-bottom: 30px;
+}
 section.realisation-projets .caption {
-  font-size: smaller;
+  font-size: 16px;
+  color: #999;
 }
 section.realisation-projets .btn-group {
   position: relative;
@@ -10608,7 +10655,10 @@ section.realisation-projets .btn-group {
   vertical-align: middle;
 }
 section.realisation-projets .filters {
-  margin: 0 0 30px 0;
+  margin: 0 0 50px 0;
+}
+section.realisation-projets .portfolio {
+  margin-bottom: 50px;
 }
 section.realisation-projets .portfolio .portfolio-item {
   width: 100%;
@@ -10617,9 +10667,14 @@ section.realisation-projets .portfolio .portfolio-item {
 section.realisation-projets .portfolio .portfolio-image img {
   width: 100%;
 }
+section.realisation-projets .portfolio .portfolio-desc {
+  padding: 10px 0;
+}
 section.realisation-projets .portfolio .portfolio-desc p {
   color: #777777;
   font-weight: 300;
+  line-height: 20px;
+  font-size: 14px;
 }
 @media (min-width: 768px) and (max-width: 991px) {
   section.realisation-projets .portfolio .portfolio-item {
@@ -10636,8 +10691,12 @@ section.realisation-projets .portfolio .portfolio-desc p {
     width: 545px;
   }
 }
+section.realisation-gallerie {
+  margin-top: 40px;
+}
 section.realisation-gallerie .caption {
-  font-size: smaller;
+  font-size: 16px;
+  color: #999999;
 }
 section.realisation-gallerie .btn-group {
   position: relative;
@@ -10645,7 +10704,7 @@ section.realisation-gallerie .btn-group {
   vertical-align: middle;
 }
 section.realisation-gallerie .filters {
-  margin: 0 0 30px 0;
+  margin: 0 0 40px 0;
 }
 section.realisation-gallerie .portfolio .portfolio-item {
   width: 100%;
@@ -10658,6 +10717,7 @@ section.realisation-gallerie .portfolio .portfolio-desc p {
   color: #777777;
   font-weight: 300;
   font-style: italic;
+  font-size: 14px;
 }
 @media (min-width: 768px) and (max-width: 991px) {
   section.realisation-gallerie .portfolio .portfolio-item {
@@ -10675,25 +10735,32 @@ section.realisation-gallerie .portfolio .portfolio-desc p {
   }
 }
 section.jointeam {
-  background-color: #f8f8f8;
+  background-color: #f9f9f9;
   padding-top: 40px;
   padding-bottom: 40px;
+  border-top: 1px dashed #dededf;
 }
 section.jointeam .left-col h3,
 section.jointeam .right-col h3 {
   font-size: 32px;
   color: #999999;
   max-width: 430px;
+  font-weight: 100;
 }
 section.jointeam .left-col p,
 section.jointeam .right-col p {
   font-size: 16px;
   color: #555555;
   max-width: 430px;
+  margin-top: 25px;
+  margin-bottom: 30px;
 }
-section.jointeam .left-col button,
-section.jointeam .right-col button {
+section.jointeam .left-col a,
+section.jointeam .right-col a {
   background-color: #208BC4;
+  padding: 15px 25px;
+  font-size: 16px;
+  margin-bottom: 30px;
 }
 section.jointeam .left-col {
   text-align: right;
@@ -10755,18 +10822,28 @@ footer a {
 footer a:hover {
   color: #999;
 }
+footer .sitemap-col {
+  max-width: 22%;
+}
 footer .sitemap-col li {
   text-transform: uppercase;
   margin-bottom: 10px;
+}
+footer .sitemap-col li a:hover {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 400;
 }
 footer .entreprise-col h5,
 footer .realisation-col h5 {
   text-transform: uppercase;
   margin-top: 0;
+  font-size: 16px;
 }
 footer .entreprise-col li,
 footer .realisation-col li {
-  line-height: 2em;
+  line-height: 28px;
+  font-size: 16px;
 }
 footer .entreprise-col a,
 footer .realisation-col a {
@@ -10777,23 +10854,35 @@ footer .realisation-col a {
   background-repeat: no-repeat;
   background-position: 0 4px;
 }
+footer .entreprise-col a:hover,
+footer .realisation-col a:hover {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 400;
+}
 footer .contact-col h3 {
-  font-size: 23px;
+  font-size: 24px;
   margin-top: 0;
 }
 footer .contact-col address {
   color: #ccc;
+  font-size: 16px;
+  font-weight: 100;
 }
 footer .contact-col h5.call-us {
-  margin-top: 30px;
+  margin-top: 25px;
+  padding-top: 25px;
   margin-bottom: 0;
   text-transform: uppercase;
   color: #ccc;
+  font-size: 12px;
+  font-weight: 100;
+  border-top: 1px dashed #555;
 }
 footer .contact-col h1 {
   margin-top: 10px;
 }
 footer .copyright {
-  padding-top: 60px;
+  padding: 30px 0 10px 0;
   color: #999;
 }
