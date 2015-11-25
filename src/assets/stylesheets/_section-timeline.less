@@ -73,9 +73,18 @@ section.historique {
           font-weight: normal;
         }
       }
+      &:nth-child(odd){
+        text-align: left;
+      }
+      &:nth-child(even){
+        text-align: right;
+      }
     }
     .entry.alt{
-      text-align: left;
+      text-align: left !important;
+    }
+    .entry.art{
+      text-align: right !important;
     }
     .alt .entry-timeline {
       right: auto;

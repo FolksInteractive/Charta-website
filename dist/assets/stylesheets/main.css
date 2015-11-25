@@ -10234,8 +10234,17 @@ section.historique #historiquebody .entry .entry-timeline span {
   font-size: 13px;
   font-weight: normal;
 }
-section.historique #historiquebody .entry.alt {
+section.historique #historiquebody .entry:nth-child(odd) {
   text-align: left;
+}
+section.historique #historiquebody .entry:nth-child(even) {
+  text-align: right;
+}
+section.historique #historiquebody .entry.alt {
+  text-align: left !important;
+}
+section.historique #historiquebody .entry.art {
+  text-align: right !important;
 }
 section.historique #historiquebody .alt .entry-timeline {
   right: auto;
