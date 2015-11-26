@@ -11041,6 +11041,23 @@ section#rona-timeline .section-footer p {
   color: #555555;
   line-height: 23px;
 }
+section.plandusite {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+section.plandusite .plandusite-container {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+section.plandusite .plandusite-container .charta-list ul {
+  margin-left: 0px;
+  padding-left: 0px;
+}
+section.plandusite .plandusite-container .charta-list.accueil ul li {
+  background: none;
+  padding-left: 0px;
+}
 section.jointeam {
   background-color: #f9f9f9;
   padding-top: 40px;
