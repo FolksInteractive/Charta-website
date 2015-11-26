@@ -10291,6 +10291,9 @@ section.historique #historiquebody :last-child {
     padding-left: 10px;
     padding-right: 10px;
   }
+  section.historique #historiquebody .entry.art {
+    text-align: left !important;
+  }
   section.historique #historiquebody .timeline-border {
     display: none;
   }
@@ -10932,6 +10935,111 @@ section.temoignages .temoignages-body .temoignages-row.even .temoignages-row-log
     padding-right: 30px;
     width: 100%;
   }
+}
+section.notrerona .notrerona-tilte {
+  background-color: #F8F8F8;
+  padding: 36px;
+  text-align: center;
+}
+section.notrerona .notrerona-tilte p {
+  font-size: 20px;
+  font-weight: 100;
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+}
+section.notrerona .notrerona-tilte .title-bold {
+  color: #5e5e5e;
+  font-weight: 600;
+  margin-bottom: 0px;
+}
+section.notrerona .rona-facebook {
+  padding: 50px 0px;
+}
+section.notrerona .rona-facebook .rona-image-container {
+  text-align: right;
+  padding-right: 40px;
+}
+section.notrerona .rona-facebook .rona-image-container .rona-image {
+  position: relative;
+  width: 400px;
+  max-width: 100%;
+  height: 250px;
+  display: inline-block;
+}
+section.notrerona .rona-facebook .rona-image-container .rona-image > img {
+  width: 100%;
+  height: auto;
+}
+section.notrerona .rona-facebook .rona-image-container .rona-image .rona-image-cover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+}
+section.notrerona .rona-facebook .rona-image-container .rona-image .rona-image-cover img {
+  position: absolute;
+  top: 50%;
+  margin-top: -38.5px;
+  left: 50%;
+  margin-left: -107.5px;
+}
+section.notrerona .rona-facebook .rona-content {
+  padding-left: 20px;
+}
+section.notrerona .rona-facebook .rona-content p.rona-title {
+  font-size: 20px;
+  color: #444444;
+  line-height: 36px;
+}
+section.notrerona .rona-facebook .rona-content p {
+  font-size: 16px;
+  color: #555555;
+  line-height: 18px;
+  margin-bottom: 10px;
+}
+section.notrerona .rona-facebook .rona-content button {
+  margin-top: 30px;
+  background-color: #208bc4;
+  border-radius: 37px;
+}
+@media (max-width: 991px) {
+  section.notrerona .rona-facebook {
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  section.notrerona .rona-facebook .rona-image-container {
+    text-align: center;
+    padding: 20px 30px ;
+  }
+  section.notrerona .rona-facebook .rona-content {
+    text-align: center;
+    padding: 20px 30px ;
+  }
+}
+section#rona-timeline .section-title {
+  padding-bottom: 0px;
+  padding-top: 0px;
+}
+section#rona-timeline .section-title p {
+  font-size: 32px;
+  color: #999999;
+  line-height: 38px;
+}
+section#rona-timeline .section-footer {
+  padding-top: 0px;
+}
+section#rona-timeline .section-footer .timeline-footer-title {
+  font-size: 32px;
+  color: #999999;
+  line-height: 38px;
+}
+section#rona-timeline .section-footer p {
+  font-size: 20px;
+  color: #555555;
+  line-height: 23px;
 }
 section.jointeam {
   background-color: #f9f9f9;
