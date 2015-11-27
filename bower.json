@@ -6,7 +6,8 @@
     "superfish": "~1.7.6",
     "animate.css": "~3.4.0",
     "isotope": "~2.2.2",
-    "bootstrap-select": "~1.7.5"
+    "bootstrap-select": "~1.7.5",
+    "jquery.gmap": "~3.3.3"
   },
   "private": true
 }

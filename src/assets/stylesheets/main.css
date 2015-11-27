@@ -11179,6 +11179,33 @@ section.carrieres .carrieres-form-container .carrieres-form span.filter-option {
   color: #777777;
   line-height: 17px;
 }
+section.carrieres .contact-sidebar {
+  margin-top: 50px;
+  padding-left: 45px;
+  padding-bottom: 35px;
+  border-left: 1px dashed #dededf;
+  font-size: 16px;
+  color: #555;
+  line-height: 18px;
+}
+section.carrieres .contact-sidebar .logo {
+  margin-bottom: 25px;
+}
+section.carrieres .contact-sidebar .company-name {
+  font-size: 18px;
+  color: #003E7D;
+  line-height: 20px;
+}
+section.carrieres .map-container {
+  height: 280px;
+}
+@media (max-width: 991px) {
+  section.carrieres .contact-sidebar {
+    border-left: none;
+    padding-left: 20px;
+    padding-bottom: 20px;
+  }
+}
 section.jointeam {
   background-color: #f9f9f9;
   padding-top: 40px;
