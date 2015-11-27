@@ -7,6 +7,8 @@ $(document).ready(function(){
   $("#mainNav .nav").superfish({
     pathClass : 'current'
   });
+
+  $('.selectpicker').selectpicker();
 });
 
 $.fn.inlineStyle = function (prop) {
