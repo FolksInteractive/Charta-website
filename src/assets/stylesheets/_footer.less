@@ -13,9 +13,17 @@ footer{
   }
 
   .sitemap-col{
+    max-width: 22%;
+
     li{
       text-transform: uppercase;
       margin-bottom: 10px;
+
+      a:hover {
+        text-decoration: none;
+        color: #fff;
+        font-weight: 400;
+      }
     }
   }
 
@@ -24,9 +32,11 @@ footer{
     h5{
       text-transform: uppercase;
       margin-top: 0;
+      font-size: 16px;
     }
     li{
-      line-height: 2em;
+      line-height: 28px;
+      font-size: 16px;
     }
 
     a{
@@ -36,24 +46,36 @@ footer{
       background-image: url('/assets/images/icon-bullet.png');
       background-repeat: no-repeat;
       background-position: 0 4px;
+
+      &:hover {
+        text-decoration: none;
+        color: #fff;
+        font-weight: 400;
+      }
     }
   }
 
   .contact-col{
     h3{
-      font-size: 23px;
+      font-size: 24px;
       margin-top: 0;
     }
 
     address{
       color: #ccc;
+      font-size: 16px;
+      font-weight: 100;
     }
 
     h5.call-us{
-      margin-top: 30px;
+      margin-top: 25px;
+      padding-top: 25px;
       margin-bottom: 0;
       text-transform: uppercase;
       color: #ccc;
+      font-size: 12px;
+      font-weight: 100;
+      border-top: 1px dashed #555;
     }
     h1{
       margin-top: 10px;
@@ -61,7 +83,7 @@ footer{
   }
 
   .copyright{
-    padding-top: 60px;
+    padding: 30px 0 10px 0;
     color: #999;
   }
 }

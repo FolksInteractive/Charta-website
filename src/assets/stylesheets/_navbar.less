@@ -1,6 +1,6 @@
 
 .navbar .container-fluid{
-  margin: 0 25px;
+  margin: 0 25px 0 5px;
 }
 
 .navbar-brand {
@@ -10,7 +10,7 @@
 
 .navbar-reach {
   float: left;
-  padding: 30px 25px;
+  padding: 28px 25px;
   font-size: @font-size-large;
   line-height: @line-height-computed;
   height: @navbar-height;
@@ -22,11 +22,15 @@
     font-size: 14px;
     font-weight: 300;
     text-transform: uppercase;
+    color: #999;
+    padding-bottom: 5px;
   }
 
   phone{
     font-weight: 700;
     font-size: 20px;
+    color: #555;
+    padding-top: 5px;
   }
 }
 
@@ -36,11 +40,15 @@
   .navbar-nav {
     > li > a {
       text-transform: uppercase;
-      font-size: 13px;
+      font-size: 14px;
+
+      &:hover {
+        color: @brand-primary;
+      }
     }
 
     > .active > a {
-
+      font-weight: 700;
     }
   }
 }
@@ -60,11 +68,11 @@
     width: 220px;
     background-color: #FFF;
     box-shadow: 0px 13px 42px 11px rgba(0, 0, 0, 0.05);
-    // border: 1px solid #EEE;
-    border-top: 2px solid @brand-primary;
+    border-top: 3px solid @brand-primary;
+    padding-bottom: 10px;
     height: auto;
     z-index: 199;
-    top: @navbar-height;
+    top: 80px;
     left: 0;
     margin: 0;
 
@@ -76,7 +84,7 @@
     a {
       display: block;
       padding: 10px 20px;      
-      font-size: 12px;
+      font-size: 14px;
       height: auto !important;
       line-height: 22px !important;
       color: #666 !important;
@@ -89,7 +97,7 @@
 
     li:hover > a {
       text-decoration: none;
-      padding-left: 28px;
+      //padding-left: 28px;
       color: @brand-primary !important;
     }
   }

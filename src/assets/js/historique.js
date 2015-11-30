@@ -16,8 +16,10 @@ $(document).ready(function () {
     $('#historiquebody').find('.entry').each( function(){
       var position = $(this).inlineStyle('left');
       if( position == '0px' ) {
+        $(this).addClass('art');
         $(this).removeClass('alt');
       } else {
+        $(this).removeClass('art');
         $(this).addClass('alt');
       }
       $(this).find('.entry-timeline').fadeIn();

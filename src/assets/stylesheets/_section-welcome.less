@@ -2,20 +2,25 @@ section.welcome {
   .container-fluid {
     padding-left: 0px;
     padding-right: 0px;
+    background-color: #F9F9F9;
+
     .col-left {
       background-color: #F9F9F9;
-      color:#999999;
-      padding-top: 70px;
-      padding-bottom: 70px;
+      color:#555;
+      padding-top: 50px;
+      padding-bottom: 50px;
       .stats-row {
         text-align: center;
         max-width: 300px;
+        .more {
+          margin: 0;
+        }
         .stats{
           font-family: "Raleway";
         }
         .stats + h5 {
           max-width: 150px;
-          margin: auto auto;
+          margin: 15px auto 0 auto;
         }
         .stats + h5:before {
           content: none;
@@ -47,8 +52,17 @@ section.welcome {
       }
     }
     .col-right {
-      padding-top: 50px;
+      padding: 30px 0 40px;
       background-color: #FFFFFF;
+
+      h1, h4 {
+        color: #444;
+        font-weight: 700;
+      }
+
+      p {
+        padding-top: 10px;
+      }
     }
   }
 }

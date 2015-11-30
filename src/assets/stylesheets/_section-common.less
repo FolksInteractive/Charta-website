@@ -1,44 +1,106 @@
-section{
+section {
   &.section-title,
-  .section-title{
+  .section-title {
     padding-top: 50px;
-    padding-bottom: 30px;
-    margin-bottom: 40px;
+    padding-bottom: 50px;
     text-align: center;
-    color:#555555;
+    color: #555555;
     font-size: 20px;
 
-    p{
+    p {
       max-width: 750px;
       margin-left: auto;
       margin-right: auto;
+      font-size: 20px;
+      font-weight: 100;
     }
 
-    &.light{
-      p{
+    &.light {
+      p {
         font-weight: 300;
       }
     }
 
+    .caption {
+      font-size: 16px;
+      color: #999;
+    }
+
   }
   &.section-footer,
-  .section-footer{
+  .section-footer {
     padding-top: 50px;
     padding-bottom: 50px;
     text-align: center;
-    color:#555555;
+    color: #555555;
     font-size: 20px;
-    p{
+    p {
       max-width: 750px;
       margin-left: auto;
       margin-right: auto;
+      font-size: 20px;
+      font-weight: 100;
     }
   }
 
-
-  &.section-title{
-    &.bg{
+  &.section-title {
+    &.bg {
       background-color: #f8f8f8;
     }
+  }
+  .charta-list {
+    h3 {
+      font-size: 20px;
+      color: #444444;
+      line-height: 23px;
+      padding-top: 0px;
+      margin-top: 0px;
+      padding-bottom: 20px;
+    }
+    ul {
+      font-size: 16px;
+      color: #555555;
+      line-height: 18px;
+      li {
+        list-style: none;
+        margin-top: 14px;
+        margin-bottom: 14px;
+        background: url("../images/widget-link.png") left top no-repeat;
+        padding-left: 15px;
+      }
+    }
+  }
+
+  textarea:focus, input:focus, button:focus{
+    outline: 0;
+  }
+}
+.spin{
+  -webkit-transform-origin: 50% 58%;
+  transform-origin:50% 58%;
+  -ms-transform-origin:50% 58%; /* IE 9 */
+  -webkit-animation: spin 1s infinite linear;
+  -moz-animation: spin 1s infinite linear;
+  -o-animation: spin 1s infinite linear;
+  animation: spin 1s infinite linear;
+}
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
   }
 }
