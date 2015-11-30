@@ -3,6 +3,7 @@ title: Carrières
 parent:
 ---
 
+<script src="{{assets}}/js/contact.js"></script>
 
 {{>banner}}
 
@@ -51,10 +52,15 @@ parent:
                   Envoyez-nous un courriel
               </p>
           </div>
+
+          <div class="row messagebox">
+              <div class="col-md-12 alert alert-success" role="alert"></div>
+          </div>
+
           <div class="row">
               <div class="col-md-5 col-sm-5 col-xs-12">
                   <label class="label" for="toaddress">VEUILLEZ SÉLECTIONNER LE TYPE D’EMPLOI *</label>
-                  <select class="selectpicker" id="toaddress">
+                  <select class="selectpicker" id="toaddress" name="toaddress" required>
                       <option value=""></option>
                       <option value="tim199178@yandex.com">tim199178@yandex.com</option>
                       <option value="tim199178@google.com">tim199178@google.com</option>
@@ -63,37 +69,39 @@ parent:
                   </select>
               </div>
               <div class="col-md-6 col-sm-6 col-xs-10">
-                  <label class="label" for="vitae">CURRICULUM VITEA *</label>
-                  <input type="text" id="vitae" placeholder="" required/>
+                  <label class="label" for="vitea">CURRICULUM VITEA *</label>
+                  <input type="text" id="vitea" name="vitea" placeholder="" required/>
               </div>
               <div class="col-md-1 col-sm-1 col-xs-2">
-                  <label class="label" for="vitae">&nbsp;</label>
+                  <label class="label" for="vitea">&nbsp;</label>
                   <div class="plus"><a href="#"><span>+</span></a></div>
               </div>
           </div>
           <div class="row">
               <div class="col-md-4 col-sm-4">
                   <label class="label" for="name">NOM *</label>
-                  <input type="text" id="name" placeholder="" required/>
+                  <input type="text" id="name" name="contact_name" placeholder="" required/>
               </div>
               <div class="col-md-5 col-sm-5">
                   <label class="label" for="email">COURRIEL *</label>
-                  <input type="email" id="name" placeholder="" required/>
+                  <input type="email" id="name" name="contact_email" placeholder="" required/>
               </div>
               <div class="col-md-3 col-sm-3">
                   <label class="label" for="telphone">TÉLÉPHONE *</label>
-                  <input type="email" id="telphone" placeholder="" required/>
+                  <input type="text" id="telphone" name="contact_phonenumber" placeholder="" required/>
               </div>
           </div>
           <div class="row">
               <div class="col-md-12">
                   <label class="label" for="message">MESSAGE *</label>
-                  <textarea id="message" placeholder="" required></textarea>
+                  <textarea id="message" placeholder="" name="message" required></textarea>
               </div>
           </div>
             <div class="row">
                 <div class="col-md-12">
-                  <button type="submit" class="btn btn-lg btn-primary">ENVOYER</button>
+                    <button type="button" id="sent" class="btn btn-lg btn-primary">
+                        ENVOYER<span class="loading-icon">&nbsp;&nbsp;&nbsp;<i class="spin glyphicon glyphicon-refresh"></i></span>
+                    </button>
                 </div>
             </div>
         </form>

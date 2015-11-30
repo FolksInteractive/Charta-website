@@ -1,3 +1,5 @@
+var endpointUrl = "http://localhost/sentmail/sendmail.php"
+
 $(document).ready(function(){
   var $window = $(window);
   var $body = $('body');

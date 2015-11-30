@@ -126,6 +126,24 @@ section.carrieres {
         color: #777777;
         line-height: 17px;
       }
+
+      input.invalid, textarea.invalid, select.invalid, button.invalid{
+        border-color: red;
+      }
+
+      button.btn{
+        .loading-icon{
+          display: none;
+        }
+      }
+      button.btn.loading{
+        .loading-icon{
+          display: inline;
+        }
+      }
+      .messagebox{
+        display: none;
+      }
     }
   }
 

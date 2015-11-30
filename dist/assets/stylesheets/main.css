@@ -9858,6 +9858,41 @@ section .charta-list ul li {
   background: url("../images/widget-link.png") left top no-repeat;
   padding-left: 15px;
 }
+section textarea:focus,
+section input:focus,
+section button:focus {
+  outline: 0;
+}
+.spin {
+  -webkit-transform-origin: 50% 58%;
+  transform-origin: 50% 58%;
+  -ms-transform-origin: 50% 58%;
+  /* IE 9 */
+  -webkit-animation: spin 1s infinite linear;
+  -moz-animation: spin 1s infinite linear;
+  -o-animation: spin 1s infinite linear;
+  animation: spin 1s infinite linear;
+}
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
 section.hero {
   position: relative;
   width: 100%;
@@ -11178,6 +11213,21 @@ section.carrieres .carrieres-form-container .carrieres-form span.filter-option {
   font-size: 14px;
   color: #777777;
   line-height: 17px;
+}
+section.carrieres .carrieres-form-container .carrieres-form input.invalid,
+section.carrieres .carrieres-form-container .carrieres-form textarea.invalid,
+section.carrieres .carrieres-form-container .carrieres-form select.invalid,
+section.carrieres .carrieres-form-container .carrieres-form button.invalid {
+  border-color: red;
+}
+section.carrieres .carrieres-form-container .carrieres-form button.btn .loading-icon {
+  display: none;
+}
+section.carrieres .carrieres-form-container .carrieres-form button.btn.loading .loading-icon {
+  display: inline;
+}
+section.carrieres .carrieres-form-container .carrieres-form .messagebox {
+  display: none;
 }
 section.carrieres .contact-sidebar {
   margin-top: 50px;
