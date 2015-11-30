@@ -26,6 +26,8 @@
     "assemble-contrib-sitemap": "*",
     "assemble-less": "^0.7.0",
     "assemble-related-pages": "0.0.4",
+    "connect-livereload": "^0.5.4",
+    "gateway": "^1.0.0",
     "grunt": "^0.4.5",
     "grunt-assemble-contextual": "^0.1.0",
     "grunt-contrib-clean": "^0.6.0",
@@ -33,6 +35,7 @@
     "grunt-contrib-copy": "^0.5.0",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-newer": "^1.1.1",
+    "grunt-php": "^1.5.1",
     "load-grunt-tasks": "^0.6.0",
     "time-grunt": "^1.0.0"
   },

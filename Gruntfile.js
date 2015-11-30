@@ -16,7 +16,6 @@
 // '<%= config.src %>/templates/pages/**/*.hbs'
 
 module.exports = function(grunt) {
-
   require('time-grunt')(grunt);
   require('load-grunt-tasks')(grunt);
 
@@ -35,7 +34,7 @@ module.exports = function(grunt) {
       },
       livereload: {
         options: {
-          livereload: '<%= connect.options.livereload %>'
+          livereload: 1025
         },
         files: [
           '<%= config.dist %>/{,*/}*.html',
@@ -54,22 +53,46 @@ module.exports = function(grunt) {
       }
     },
 
-    connect: {
-      options: {
-        port: 9001,
-        livereload: 35729,
-        // change this to '0.0.0.0' to access the server from outside
-        hostname: 'localhost'
-      },
-      livereload: {
+    php: {
+      dist: {
         options: {
+          hostname: 'localhost',
+          port: 7000,
+          base: '<%= config.dist %>',
+          keepalive: false,
           open: true,
-          base: [
-            '<%= config.dist %>'
-          ]
-        },
-      }
+          directives: {
+            'error_log': require('path').resolve('logs/error.log')
+          }
+        }
+      }   
     },
+
+    // connect: {
+    //   options: {
+    //     port: 9001,
+    //     livereload: 35729,
+    //     // change this to '0.0.0.0' to access the server from outside
+    //     hostname: 'localhost'
+    //   },
+    //   livereload: {
+    //     options: {
+    //       open: true,
+    //       base: [
+    //         '<%= config.dist %>'
+    //       ],
+    //       middleware: function (connect) {
+    //         console.log("--------", __dirname + '/dist')
+    //         return [
+    //           require('grunt-connect-livereload/lib/utils').livereloadSnippet,
+    //           // gateway(__dirname + '/dist', {
+    //           //   '.php': 'php-cgi'
+    //           // })
+    //         ];
+    //       }
+    //     }
+    //   }
+    // },
 
     assemble: {
       options: {
@@ -128,8 +151,8 @@ module.exports = function(grunt) {
 
   grunt.registerTask('server', [
     'build',
-    'connect:livereload',
-    'watch'
+    'php:dist',
+    'watch',
   ]);
 
   grunt.registerTask('build', [
