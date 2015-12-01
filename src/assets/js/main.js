@@ -1,4 +1,4 @@
-var endpointUrl = "http://localhost/sentmail/sendmail.php"
+var endpointUrl = "http://secondhandboards.com/sdw/sentmail/sendmail.php";
 
 $(document).ready(function(){
   var $window = $(window);
