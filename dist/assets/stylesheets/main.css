@@ -6555,6 +6555,7 @@ body {
 .navbar-brand {
   padding-top: 16px;
   padding-right: 25px;
+  border-right: 1px solid #eee;
 }
 .navbar-reach {
   float: left;
@@ -6562,7 +6563,6 @@ body {
   font-size: 18px;
   line-height: 20px;
   height: 100px;
-  border-left: 1px solid #eee;
 }
 .navbar-reach h6 {
   margin: 0;
@@ -6633,6 +6633,16 @@ body {
 .navbar-nav ul li:hover > a {
   text-decoration: none;
   color: #208bc4 !important;
+}
+@media (min-width: 767px) and (max-width: 1110px) {
+  .navbar-reach {
+    display: none;
+  }
+}
+@media (max-width: 550px) {
+  .navbar-reach {
+    display: none;
+  }
 }
 @font-face {
   font-family: 'font-icons';
@@ -10104,32 +10114,49 @@ section.welcome .container-fluid .col-right p {
   }
 }
 @media (max-width: 992px) {
-  .stats-row {
+  section.welcome .stats-row {
     margin-left: auto;
     margin-right: auto;
+  }
+  section.welcome .container-fluid .col-right {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 section.home-clients {
   background-image: url('/assets/images/hero-bleued.png');
-  color: white;
-  padding: 60px 0;
+  height: 480px;
 }
-section.home-clients ul li {
-  padding: 20px;
+section.home-clients .at_logo_carousel_calltoaction_block {
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.8);
 }
-section.home-clients p {
-  font-size: 18px;
-  max-width: 640px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 30px 0;
-  color: #fff;
+section.home-clients .at_logo_carousel_calltoaction_block h2 {
+  color: #555555;
+  font-size: 22px;
+  line-height: 24px;
 }
-section.home-clients .btn {
-  padding: 20px 40px;
-  border-radius: 40px;
-  margin-top: 20px;
+section.home-clients .at_logo_carousel_calltoaction_block a.btn {
+  border-radius: 23px;
+}
+section.home-clients ul {
+  display: none;
+}
+@media (min-width: 1280px) {
+  section.home-clients {
+    background-size: 100% auto;
+  }
+}
+@media (min-width: 992px) {
+  section.home-clients .at_logo_carousel_calltoaction_block {
+    padding: 50px 50px;
+  }
+}
+@media (max-width: 440px) {
+  section.home-clients .at_logo_carousel_calltoaction_block {
+    width: 95%;
+    max-width: 300px;
+  }
 }
 section.home-instagram h2 {
   text-transform: uppercase;

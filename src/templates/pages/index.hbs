@@ -2,6 +2,17 @@
 title: Accueil
 parent: root
 ---
+
+<!-- Required Files -->
+<script src="/bower_components/jquery-waitforimages/dist/jquery.waitforimages.min.js"></script>
+<script src="/bower_components/jquery.debouncedresize/js/jquery.debouncedresize.js"></script>
+<!-- End of Required Files -->
+
+<!-- Logo Carousel Files -->
+<link href="{{assets}}/libs/logocarousel/at.logocarousel.min.css" type="text/css" rel="stylesheet" media="all" />
+<script src="{{assets}}/libs/logocarousel/jquery.at.logocarousel.min.js" type="text/javascript"></script>
+<!-- End of Logo carousel Files -->
+
 <script src="{{assets}}/js/index.js"></script>
 
 <section id="hero" class="hero parallax full-screen">
@@ -82,22 +93,66 @@ parent: root
     </div>
 </section>
 
-<section class="home-clients parallax text-center">
-  <div class="container">
 
-    <ul class="logos list-inline">
-      <li><img src="{{assets}}/images/logo-mcgill.png"></li>
-      <li><img src="{{assets}}/images/logo-ibm.png"></li>
-      <li><img src="{{assets}}/images/logo-iga.png"></li>
-      <li><img src="{{assets}}/images/logo-telefilm.png"></li>
-      <li><img src="{{assets}}/images/logo-rolls-royce.png"></li>
+
+<section class="home-clients at_logo_carousel" id="logo_carousel">
+    <div class="at_logo_carousel_calltoaction_container light">
+        <div class="at_logo_carousel_calltoaction">
+            <div class="at_logo_carousel_calltoaction_block">
+                <h2>
+                    Des clients satisfaits depuis 1974
+                </h2>
+                <p>
+                    Depuis plus de 40 ans, la qualité de nos réalisations, le travail exemplaire de notre équipe, notre souci du travail bien fait, notre écoute active et notre respect des attentes et des besoins de notre clientèle, nous offre la plus grande des récompenses : leur satisfaction.
+                </p>
+                <div class="at_logo_carousel_dismiss_button_container">
+                    <a href="{{relative page.dest "dist/realisation-projets.html"}}" class="btn btn-primary btn-lg">Voyez toute nos réalisations</a>
+                </div>
+                <div class="at_logo_clear"></div>
+            </div>
+        </div>
+    </div>
+    <ul>
+        <li><img src="{{assets}}/images/logo/agropur-w.png"></li>
+        <li><img src="{{assets}}/images/logo/algorythme-pharma-w.png"></li>
+        <li><img src="{{assets}}/images/logo/arrondissement-de-lachine-w.png"></li>
+        <li><img src="{{assets}}/images/logo/au-bal-masque-w.png"></li>
+        <li><img src="{{assets}}/images/logo/aviva-w.png"></li>
+        <li><img src="{{assets}}/images/logo/banque-scotia-w.png"></li>
+        <li><img src="{{assets}}/images/logo/bba-w.png"></li>
+        <li><img src="{{assets}}/images/logo/bdc-w.png"></li>
+        <li><img src="{{assets}}/images/logo/brookfield-johnson-controls-w.png"></li>
+        <li><img src="{{assets}}/images/logo/cdec-lasalle-lachine-w.png"></li>
+        <li><img src="{{assets}}/images/logo/cedra-w.png"></li>
+        <li><img src="{{assets}}/images/logo/college-sainte-anne-2-w.png"></li>
+        <li><img src="{{assets}}/images/logo/college-sainte-anne-w.png"></li>
+        <li><img src="{{assets}}/images/logo/congregation-des-ssa-w.png"></li>
+        <li><img src="{{assets}}/images/logo/cossette-w.png"></li>
+        <li><img src="{{assets}}/images/logo/cpe-jardins-des-frimousses-w.png"></li>
+        <li><img src="{{assets}}/images/logo/enjeu-w.png"></li>
+        <li><img src="{{assets}}/images/logo/financiere-manuvie-w.png"></li>
+        <li><img src="{{assets}}/images/logo/grand-and-toy-w.png"></li>
+        <li><img src="{{assets}}/images/logo/groupe-accueil-w.png"></li>
+        <li><img src="{{assets}}/images/logo/honeywell-adi-w.png"></li>
+        <li><img src="{{assets}}/images/logo/hydro-quebec-w.png"></li>
+        <li><img src="{{assets}}/images/logo/iga-vallee-w.png"></li>
+        <li><img src="{{assets}}/images/logo/iga-w.png"></li>
+        <li><img src="{{assets}}/images/logo/ivanhoe-cambridge-w.png"></li>
+        <li><img src="{{assets}}/images/logo/lacapitale-w.png"></li>
+        <li><img src="{{assets}}/images/logo/le-parados-w.png"></li>
+        <li><img src="{{assets}}/images/logo/loto-quebec-w.png"></li>
+        <li><img src="{{assets}}/images/logo/lower-canada-college-w.png"></li>
+        <li><img src="{{assets}}/images/logo/maison-developpement-durable-w.png"></li>
+        <li><img src="{{assets}}/images/logo/neuf-architectes-w.png"></li>
+        <li><img src="{{assets}}/images/logo/plaza-cote-des-neiges-w.png"></li>
+        <li><img src="{{assets}}/images/logo/resbourne-w.png"></li>
+        <li><img src="{{assets}}/images/logo/rona-lachine-w.png"></li>
+        <li><img src="{{assets}}/images/logo/standard-life-w.png"></li>
+        <li><img src="{{assets}}/images/logo/telus-w.png"></li>
+        <li><img src="{{assets}}/images/logo/triovest-w.png"></li>
+        <li><img src="{{assets}}/images/logo/ville-de-lachine-w.png"></li>
+        <li><img src="{{assets}}/images/logo/vision7-logo.png"></li>
     </ul>
-
-    <p>
-      Depuis plus de 40 ans, la qualité de nos réalisations, le travail exemplaire de notre équipe, notre souci du travail bien fait, notre écoute active et notre respect des attentes et des besoins de notre clientèle, nous offre la plus grande des récompenses : leur satisfaction.
-    </p>
-
-    <a href="{{relative page.dest "dist/realisation-projets.html"}}" class="portfolio-btn btn-lg btn light bordered rounded">Voyez toute nos réalisations</a>
   </div>
 </section>
 

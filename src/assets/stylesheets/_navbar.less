@@ -6,6 +6,7 @@
 .navbar-brand {
   padding-top: 16px;
   padding-right: 25px;
+  border-right: 1px solid #eee;
 }
 
 .navbar-reach {
@@ -14,7 +15,6 @@
   font-size: @font-size-large;
   line-height: @line-height-computed;
   height: @navbar-height;
-  border-left: 1px solid #eee;
 
   h6{
     margin: 0;
@@ -78,12 +78,12 @@
 
     li {
       float: none;
-      margin: 0;      
+      margin: 0;
     }
 
     a {
       display: block;
-      padding: 10px 20px;      
+      padding: 10px 20px;
       font-size: 14px;
       height: auto !important;
       line-height: 22px !important;
@@ -100,5 +100,15 @@
       //padding-left: 28px;
       color: @brand-primary !important;
     }
+  }
+}
+@media (min-width: 767px) and (max-width: 1110px) {
+  .navbar-reach{
+    display: none;
+  }
+}
+@media (max-width: 550px){
+  .navbar-reach{
+    display: none;
   }
 }
