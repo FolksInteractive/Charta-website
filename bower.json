@@ -10,7 +10,8 @@
     "jquery.gmap": "~3.3.3",
     "jquery-waitforimages": "~1.5.0",
     "jquery.debouncedresize": "~1.0.1",
-    "instafeed.js": "~1.4.1"
+    "instafeed.js": "~1.4.1",
+    "moment": "~2.10.6"
   },
   "private": true
 }

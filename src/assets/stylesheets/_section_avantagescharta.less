@@ -1,78 +1,57 @@
 section.advantagescharta {
-  .charta-title{
-    background-color: #F8F8F8;
-    padding: 36px;
-    text-align: center;  
-
-    a {
-      font-weight: 400;
-    }
-
-    p {
-      font-size: 20px;
-      font-weight: 100;
-    }
-  }
-  .chartacontainer{
-    padding-top: 45px;
-    padding-bottom: 45px;
-    max-width: 750px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 15px;
-    .charta-item{
-      position: relative;
-      .charta-item-step{
-        position: absolute;
-        top:0px;
-        bottom: 0px;
-        left: 0px;
+  .advantage-item{
+    position: relative;
+    .advantage-item-step{
+      position: absolute;
+      top:0px;
+      bottom: 0px;
+      left: 0px;
+      width: 40px;
+      .step-label{
+        display: block;
         width: 40px;
-        .step-label{
-          display: block;
-          width: 40px;
-          height: 40px;
-          line-height: 38px;
-          background-color: #208BC4;
-          border-radius: 19px;
-          text-align: center;
-          margin-left: auto;
-          margin-right: auto;
-          color: #FFFFFF;
-          font-size: 20px;
-          font-weight: 400;
-        }
-        .divider{
-          position: absolute;
-          left: 19.5px;
-          width: 1px;
-          top:45px;
-          bottom:0px;
-          border-left: 1px dashed #CCC;
-        }
+        height: 40px;
+        line-height: 38px;
+        background-color: #208BC4;
+        border-radius: 19px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        color: #FFFFFF;
+        font-size: 20px;
+        font-weight: 400;
       }
-      .charta-item-body{
-        margin-left: 60px;
-        padding-bottom: 30px;
-        h2{
-          font-size: 24px;
-          color: #444444;
-          line-height: 28px;
-          padding-top: 5px;
-        }
-        p{
-          font-size: 16px;
-          color: #555555;
-        }
+      .divider{
+        position: absolute;
+        left: 19.5px;
+        width: 1px;
+        top:45px;
+        bottom:0px;
+        border-left: 1px dashed #CCC;
       }
     }
-    :last-child{
-      .charta-item-step{
+    .advantage-item-body{
+      margin-left: 60px;
+      padding-bottom: 30px;
+      h2{
+        font-size: 24px;
+        color: #444444;
+        line-height: 28px;
+        padding-top: 5px;
+      }
+      p{
+        font-size: 16px;
+        color: #555555;
+      }
+    }
+    
+    &:last-child{
+      .advantage-item-step{
         .divider{
           display: none;
         }
       }
-      .charta-item-body{
+      .advantage-item-body{
         padding-bottom: 0px;
       }
     }

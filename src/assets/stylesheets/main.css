@@ -6180,6 +6180,25 @@ ul {
 a:hover {
   text-decoration: none;
 }
+.charta-title {
+  background-color: #F8F8F8;
+  padding: 36px;
+  text-align: center;
+}
+.charta-title a {
+  font-weight: 400;
+}
+.charta-title p {
+  font-size: 20px;
+  font-weight: 100;
+}
+.charta-container {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+}
 .btn.bordered {
   background-color: transparent;
   border-width: 2px;
@@ -10447,37 +10466,17 @@ section.philosophie .philosophie-body .right-col {
     margin-bottom: 30px;
   }
 }
-section.advantagescharta .charta-title {
-  background-color: #F8F8F8;
-  padding: 36px;
-  text-align: center;
-}
-section.advantagescharta .charta-title a {
-  font-weight: 400;
-}
-section.advantagescharta .charta-title p {
-  font-size: 20px;
-  font-weight: 100;
-}
-section.advantagescharta .chartacontainer {
-  padding-top: 45px;
-  padding-bottom: 45px;
-  max-width: 750px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 15px;
-}
-section.advantagescharta .chartacontainer .charta-item {
+section.advantagescharta .advantage-item {
   position: relative;
 }
-section.advantagescharta .chartacontainer .charta-item .charta-item-step {
+section.advantagescharta .advantage-item .advantage-item-step {
   position: absolute;
   top: 0px;
   bottom: 0px;
   left: 0px;
   width: 40px;
 }
-section.advantagescharta .chartacontainer .charta-item .charta-item-step .step-label {
+section.advantagescharta .advantage-item .advantage-item-step .step-label {
   display: block;
   width: 40px;
   height: 40px;
@@ -10491,7 +10490,7 @@ section.advantagescharta .chartacontainer .charta-item .charta-item-step .step-l
   font-size: 20px;
   font-weight: 400;
 }
-section.advantagescharta .chartacontainer .charta-item .charta-item-step .divider {
+section.advantagescharta .advantage-item .advantage-item-step .divider {
   position: absolute;
   left: 19.5px;
   width: 1px;
@@ -10499,24 +10498,24 @@ section.advantagescharta .chartacontainer .charta-item .charta-item-step .divide
   bottom: 0px;
   border-left: 1px dashed #CCC;
 }
-section.advantagescharta .chartacontainer .charta-item .charta-item-body {
+section.advantagescharta .advantage-item .advantage-item-body {
   margin-left: 60px;
   padding-bottom: 30px;
 }
-section.advantagescharta .chartacontainer .charta-item .charta-item-body h2 {
+section.advantagescharta .advantage-item .advantage-item-body h2 {
   font-size: 24px;
   color: #444444;
   line-height: 28px;
   padding-top: 5px;
 }
-section.advantagescharta .chartacontainer .charta-item .charta-item-body p {
+section.advantagescharta .advantage-item .advantage-item-body p {
   font-size: 16px;
   color: #555555;
 }
-section.advantagescharta .chartacontainer :last-child .charta-item-step .divider {
+section.advantagescharta .advantage-item:last-child .advantage-item-step .divider {
   display: none;
 }
-section.advantagescharta .chartacontainer :last-child .charta-item-body {
+section.advantagescharta .advantage-item:last-child .advantage-item-body {
   padding-bottom: 0px;
 }
 section.equipe h3 {
@@ -11290,6 +11289,47 @@ section.carrieres .map-container {
     border-left: none;
     padding-left: 20px;
     padding-bottom: 20px;
+  }
+}
+section.nouvelles .news-container {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+section.nouvelles .news-item {
+  display: block;
+}
+section.nouvelles .news-item.thumbnail {
+  border: 0;
+  padding: 10px;
+  margin-bottom: 0;
+}
+section.nouvelles .news-item .news-object {
+  display: block;
+}
+section.nouvelles .news-item .news-body {
+  padding: 10px 2px 0 2px;
+}
+section.nouvelles .news-item .news-body a {
+  font-size: 16px;
+}
+section.nouvelles .news-item .news-body span {
+  font-weight: lighter;
+  font-size: 14px;
+  color: #ccc;
+  padding-left: 2px;
+}
+section.nouvelles .news-item .news-body p {
+  font-weight: lighter;
+  padding-top: 5px;
+  font-size: 16px;
+  line-height: normal;
+}
+@media (max-width: 767px) {
+  section.nouvelles .news-item.thumbnail {
+    margin-bottom: 30px;
+  }
+  section.nouvelles .news-item .news-body {
+    text-align: center;
   }
 }
 section.jointeam {
