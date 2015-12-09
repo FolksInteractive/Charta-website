@@ -6570,6 +6570,7 @@ body {
 }
 .navbar .container-fluid {
   margin: 0 25px 0 5px;
+  z-index: 1000;
 }
 .navbar-brand {
   padding-top: 16px;
@@ -6578,24 +6579,31 @@ body {
 }
 .navbar-reach {
   float: left;
-  padding: 28px 25px;
+  padding: 0 30px;
   font-size: 18px;
   line-height: 20px;
   height: 100px;
 }
-.navbar-reach h6 {
-  margin: 0;
-  padding: 0;
-  font-size: 14px;
-  font-weight: 300;
-  text-transform: uppercase;
-  color: #999;
-  padding-bottom: 5px;
+.navbar-reach h4 {
+  color: #004284 !important;
+  font-size: 15px;
+  max-width: 400px;
+  margin: 10px 0 5px 0;
 }
 .navbar-reach phone {
   font-weight: 700;
   font-size: 20px;
   color: #555;
+  padding-top: 5px;
+  color: #208bc4;
+}
+.navbar-reach h6 {
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  font-weight: 300;
+  font-style: italic;
+  color: #999;
   padding-top: 5px;
 }
 .navbar-default {
@@ -10169,6 +10177,9 @@ section.home-clients .at_logo_carousel_calltoaction_block a.btn {
 }
 section.home-clients ul {
   display: none;
+}
+section.home-clients .at_logo_carousel_calltoaction_container {
+  z-index: 10;
 }
 @media (min-width: 1280px) {
   section.home-clients {

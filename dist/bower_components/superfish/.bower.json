@@ -29,6 +29,5 @@
   },
   "_source": "git://github.com/joeldbirch/superfish.git",
   "_target": "~1.7.6",
-  "_originalSource": "superfish",
-  "_direct": true
+  "_originalSource": "superfish"
 }

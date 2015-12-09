@@ -41,6 +41,5 @@
   },
   "_source": "git://github.com/metafizzy/isotope.git",
   "_target": "~2.2.2",
-  "_originalSource": "isotope",
-  "_direct": true
+  "_originalSource": "isotope"
 }
