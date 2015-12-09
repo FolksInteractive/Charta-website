@@ -3,18 +3,6 @@ title: Accueil
 parent: root
 ---
 
-<!-- Required Files -->
-<script src="/bower_components/jquery-waitforimages/dist/jquery.waitforimages.min.js"></script>
-<script src="/bower_components/jquery.debouncedresize/js/jquery.debouncedresize.js"></script>
-<!-- End of Required Files -->
-
-<!-- Logo Carousel Files -->
-<link href="{{assets}}/libs/logocarousel/at.logocarousel.min.css" type="text/css" rel="stylesheet" media="all" />
-<script src="{{assets}}/libs/logocarousel/jquery.at.logocarousel.min.js" type="text/javascript"></script>
-<!-- End of Logo carousel Files -->
-
-<script src="{{assets}}/js/index.js"></script>
-
 <section id="hero" class="hero parallax full-screen">
   <div class="swiper-container">
 
@@ -185,7 +173,7 @@ parent: root
         </a>
       </div>
       <div class="col-md-4">
-        <a href="#" class="thumbnail">
+        <a href="{{relative page.dest "dist/notre-magasinrona.html"}}" class="thumbnail">
           <img src="{{assets}}/images/icon-circle-tools.png" class="over icon-circle-tools">
           <img src="{{assets}}/images/thumb-consultant.png">
           <div class="caption text-center">
@@ -206,37 +194,6 @@ parent: root
       <a href="https://instagram.com/chartaconstruction/" target="_blank">@chartaconstruction</a>
     </h4>
 
-    <div class="owl-carousel">
-      <div>
-        <a href="#"><img src="http://lorempixel.com/400/300/city/1"></a>
-      </div>
-      <div>
-        <a href="#"><img src="http://lorempixel.com/400/300/city/2"></a>
-      </div>
-      <div>
-        <a href="#"><img src="http://lorempixel.com/400/300/city/3"></a>
-      </div>
-      <div>
-        <a href="#"><img src="http://lorempixel.com/400/300/city/4"></a>
-      </div>
-      <div>
-        <a href="#"><img src="http://lorempixel.com/400/300/city/5"></a>
-      </div>
-      <div>
-        <a href="#"><img src="http://lorempixel.com/400/300/city/6"></a>
-      </div>
-      <div>
-        <a href="#"><img src="http://lorempixel.com/400/300/city/7"></a>
-      </div>
-      <div>
-        <a href="#"><img src="http://lorempixel.com/400/300/city/8"></a>
-      </div>
-      <div>
-        <a href="#"><img src="http://lorempixel.com/400/300/city/9"></a>
-      </div>
-      <div>
-        <a href="#"><img src="http://lorempixel.com/400/300/city/10"></a>
-      </div>
-    </div>
+    <div id="instagramFeed" class="owl-carousel"></div>
   </div>
 </section>
