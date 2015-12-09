@@ -17,6 +17,8 @@ var defaults = {
     freeModeMomentumBounceRatio: 1,
     freeModeSticky: false,
     freeModeMinimumVelocity: 0.02,
+    // Autoheight
+    autoHeight: false,
     // Set wrapper width
     setWrapperSize: false,
     // Virtual Translate
@@ -180,7 +182,7 @@ var initialVirtualTranslate = params && params.virtualTranslate;
 params = params || {};
 var originalParams = {};
 for (var param in params) {
-    if (typeof params[param] === 'object') {
+    if (typeof params[param] === 'object' && !(params[param].nodeType || params[param] === window || params[param] === document || (typeof Dom7 !== 'undefined' && params[param] instanceof Dom7) || (typeof jQuery !== 'undefined' && params[param] instanceof jQuery))) {
         originalParams[param] = {};
         for (var deepParam in params[param]) {
             originalParams[param][deepParam] = params[param][deepParam];
@@ -238,11 +240,19 @@ s.getActiveBreakpoint = function () {
     //Get breakpoint for window width
     if (!s.params.breakpoints) return false;
     var breakpoint = false;
-    for ( var point in s.params.breakpoints ) {
+    var points = [], point;
+    for ( point in s.params.breakpoints ) {
         if (s.params.breakpoints.hasOwnProperty(point)) {
-            if (point >= $(window).width() && !breakpoint) {
-                breakpoint = point;
-            }
+            points.push(point);
+        }
+    }
+    points.sort(function (a, b) {
+        return parseInt(a, 10) > parseInt(b, 10);
+    });
+    for (var i = 0; i < points.length; i++) {
+        point = points[i];
+        if (point >= window.innerWidth && !breakpoint) {
+            breakpoint = point;
         }
     }
     return breakpoint || 'max';
@@ -287,6 +297,9 @@ if (s.params.freeMode) {
 if (!s.support.flexbox) {
     s.classNames.push('swiper-container-no-flexbox');
     s.params.slidesPerColumn = 1;
+}
+if (s.params.autoHeight) {
+    s.classNames.push('swiper-container-autoheight');
 }
 // Enable slides progress when required
 if (s.params.parallax || s.params.watchSlidesVisibility) {
@@ -537,6 +550,11 @@ s.maxTranslate = function () {
 /*=========================
   Slider/slides sizes
   ===========================*/
+s.updateAutoHeight = function () {
+    // Update Height
+    var newHeight = s.slides.eq(s.activeIndex)[0].offsetHeight;
+    if (newHeight) s.wrapper.css('height', s.slides.eq(s.activeIndex)[0].offsetHeight + 'px');
+};
 s.updateContainerSize = function () {
     var width, height;
     if (typeof s.params.width !== 'undefined') {
@@ -774,6 +792,8 @@ s.updateProgress = function (translate) {
         translate = s.translate || 0;
     }
     var translatesDiff = s.maxTranslate() - s.minTranslate();
+    var wasBeginning = s.isBeginning;
+    var wasEnd = s.isEnd;
     if (translatesDiff === 0) {
         s.progress = 0;
         s.isBeginning = s.isEnd = true;
@@ -783,8 +803,8 @@ s.updateProgress = function (translate) {
         s.isBeginning = s.progress <= 0;
         s.isEnd = s.progress >= 1;
     }
-    if (s.isBeginning) s.emit('onReachBeginning', s);
-    if (s.isEnd) s.emit('onReachEnd', s);
+    if (s.isBeginning && !wasBeginning) s.emit('onReachBeginning', s);
+    if (s.isEnd && !wasEnd) s.emit('onReachEnd', s);
 
     if (s.params.watchSlidesProgress) s.updateSlidesProgress(translate);
     s.emit('onProgress', s, s.progress);
@@ -939,6 +959,9 @@ s.update = function (updateTranslate) {
         }
         if (s.params.freeMode) {
             forceSetTranslate();
+            if (s.params.autoHeight) {
+                s.updateAutoHeight();
+            }
         }
         else {
             if ((s.params.slidesPerView === 'auto' || s.params.slidesPerView > 1) && s.isEnd && !s.params.centeredSlides) {
@@ -951,7 +974,9 @@ s.update = function (updateTranslate) {
                 forceSetTranslate();
             }
         }
-
+    }
+    else if (s.params.autoHeight) {
+        s.updateAutoHeight();
     }
 };
 
@@ -983,6 +1008,10 @@ s.onResize = function (forceUpdatePagination) {
         s.setWrapperTranslate(newTranslate);
         s.updateActiveIndex();
         s.updateClasses();
+
+        if (s.params.autoHeight) {
+            s.updateAutoHeight();
+        }
     }
     else {
         s.updateClasses();
@@ -1679,7 +1708,6 @@ s.slideTo = function (slideIndex, speed, runCallbacks, internal) {
     if (s.snapIndex >= s.snapGrid.length) s.snapIndex = s.snapGrid.length - 1;
 
     var translate = - s.snapGrid[s.snapIndex];
-
     // Stop autoplay
     if (s.params.autoplay && s.autoplaying) {
         if (internal || !s.params.autoplayDisableOnInteraction) {
@@ -1712,21 +1740,28 @@ s.slideTo = function (slideIndex, speed, runCallbacks, internal) {
     s.previousIndex = s.activeIndex || 0;
     s.activeIndex = slideIndex;
 
-    if (translate === s.translate) {
+    if ((s.rtl && -translate === s.translate) || (!s.rtl && translate === s.translate)) {
+        // Update Height
+        if (s.params.autoHeight) {
+            s.updateAutoHeight();
+        }
         s.updateClasses();
+        if (s.params.effect !== 'slide') {
+            s.setWrapperTranslate(translate);
+        }
         return false;
     }
     s.updateClasses();
     s.onTransitionStart(runCallbacks);
-    var translateX = isH() ? translate : 0, translateY = isH() ? 0 : translate;
+
     if (speed === 0) {
-        s.setWrapperTransition(0);
         s.setWrapperTranslate(translate);
+        s.setWrapperTransition(0);
         s.onTransitionEnd(runCallbacks);
     }
     else {
-        s.setWrapperTransition(speed);
         s.setWrapperTranslate(translate);
+        s.setWrapperTransition(speed);
         if (!s.animating) {
             s.animating = true;
             s.wrapper.transitionEnd(function () {
@@ -1742,6 +1777,9 @@ s.slideTo = function (slideIndex, speed, runCallbacks, internal) {
 
 s.onTransitionStart = function (runCallbacks) {
     if (typeof runCallbacks === 'undefined') runCallbacks = true;
+    if (s.params.autoHeight) {
+        s.updateAutoHeight();
+    }
     if (s.lazy) s.lazy.onTransitionStart();
     if (runCallbacks) {
         s.emit('onTransitionStart', s);
@@ -1846,6 +1884,19 @@ s.setWrapperTranslate = function (translate, updateActiveIndex, byController) {
     }
 
     s.translate = isH() ? x : y;
+
+    // Check if we need to update progress
+    var progress;
+    var translatesDiff = s.maxTranslate() - s.minTranslate();
+    if (translatesDiff === 0) {
+        progress = 0;
+    }
+    else {
+        progress = (translate - s.minTranslate()) / (translatesDiff);
+    }
+    if (progress !== s.progress) {
+        s.updateProgress(translate);
+    }
 
     if (updateActiveIndex) s.updateActiveIndex();
     if (s.params.effect !== 'slide' && s.effects[s.params.effect]) {

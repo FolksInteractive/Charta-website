@@ -1,5 +1,5 @@
 /**
- * Swiper 3.2.0
+ * Swiper 3.2.7
  * Most modern mobile touch slider and framework with hardware accelerated transitions
  * 
  * http://www.idangero.us/swiper/
@@ -10,7 +10,7 @@
  * 
  * Licensed under MIT
  * 
- * Released on: November 7, 2015
+ * Released on: December 7, 2015
  */
 (function (root, factory) {
 	'use strict';
@@ -55,6 +55,8 @@
             freeModeMomentumBounceRatio: 1,
             freeModeSticky: false,
             freeModeMinimumVelocity: 0.02,
+            // Autoheight
+            autoHeight: false,
             // Set wrapper width
             setWrapperSize: false,
             // Virtual Translate
@@ -218,7 +220,7 @@
         params = params || {};
         var originalParams = {};
         for (var param in params) {
-            if (typeof params[param] === 'object') {
+            if (typeof params[param] === 'object' && !(params[param].nodeType || params[param] === window || params[param] === document || (typeof Dom7 !== 'undefined' && params[param] instanceof Dom7) || (typeof jQuery !== 'undefined' && params[param] instanceof jQuery))) {
                 originalParams[param] = {};
                 for (var deepParam in params[param]) {
                     originalParams[param][deepParam] = params[param][deepParam];
@@ -276,11 +278,19 @@
             //Get breakpoint for window width
             if (!s.params.breakpoints) return false;
             var breakpoint = false;
-            for ( var point in s.params.breakpoints ) {
+            var points = [], point;
+            for ( point in s.params.breakpoints ) {
                 if (s.params.breakpoints.hasOwnProperty(point)) {
-                    if (point >= $(window).width() && !breakpoint) {
-                        breakpoint = point;
-                    }
+                    points.push(point);
+                }
+            }
+            points.sort(function (a, b) {
+                return parseInt(a, 10) > parseInt(b, 10);
+            });
+            for (var i = 0; i < points.length; i++) {
+                point = points[i];
+                if (point >= window.innerWidth && !breakpoint) {
+                    breakpoint = point;
                 }
             }
             return breakpoint || 'max';
@@ -325,6 +335,9 @@
         if (!s.support.flexbox) {
             s.classNames.push('swiper-container-no-flexbox');
             s.params.slidesPerColumn = 1;
+        }
+        if (s.params.autoHeight) {
+            s.classNames.push('swiper-container-autoheight');
         }
         // Enable slides progress when required
         if (s.params.parallax || s.params.watchSlidesVisibility) {
@@ -575,6 +588,11 @@
         /*=========================
           Slider/slides sizes
           ===========================*/
+        s.updateAutoHeight = function () {
+            // Update Height
+            var newHeight = s.slides.eq(s.activeIndex)[0].offsetHeight;
+            if (newHeight) s.wrapper.css('height', s.slides.eq(s.activeIndex)[0].offsetHeight + 'px');
+        };
         s.updateContainerSize = function () {
             var width, height;
             if (typeof s.params.width !== 'undefined') {
@@ -812,6 +830,8 @@
                 translate = s.translate || 0;
             }
             var translatesDiff = s.maxTranslate() - s.minTranslate();
+            var wasBeginning = s.isBeginning;
+            var wasEnd = s.isEnd;
             if (translatesDiff === 0) {
                 s.progress = 0;
                 s.isBeginning = s.isEnd = true;
@@ -821,8 +841,8 @@
                 s.isBeginning = s.progress <= 0;
                 s.isEnd = s.progress >= 1;
             }
-            if (s.isBeginning) s.emit('onReachBeginning', s);
-            if (s.isEnd) s.emit('onReachEnd', s);
+            if (s.isBeginning && !wasBeginning) s.emit('onReachBeginning', s);
+            if (s.isEnd && !wasEnd) s.emit('onReachEnd', s);
         
             if (s.params.watchSlidesProgress) s.updateSlidesProgress(translate);
             s.emit('onProgress', s, s.progress);
@@ -977,6 +997,9 @@
                 }
                 if (s.params.freeMode) {
                     forceSetTranslate();
+                    if (s.params.autoHeight) {
+                        s.updateAutoHeight();
+                    }
                 }
                 else {
                     if ((s.params.slidesPerView === 'auto' || s.params.slidesPerView > 1) && s.isEnd && !s.params.centeredSlides) {
@@ -989,7 +1012,9 @@
                         forceSetTranslate();
                     }
                 }
-        
+            }
+            else if (s.params.autoHeight) {
+                s.updateAutoHeight();
             }
         };
         
@@ -1021,6 +1046,10 @@
                 s.setWrapperTranslate(newTranslate);
                 s.updateActiveIndex();
                 s.updateClasses();
+        
+                if (s.params.autoHeight) {
+                    s.updateAutoHeight();
+                }
             }
             else {
                 s.updateClasses();
@@ -1717,7 +1746,6 @@
             if (s.snapIndex >= s.snapGrid.length) s.snapIndex = s.snapGrid.length - 1;
         
             var translate = - s.snapGrid[s.snapIndex];
-        
             // Stop autoplay
             if (s.params.autoplay && s.autoplaying) {
                 if (internal || !s.params.autoplayDisableOnInteraction) {
@@ -1750,21 +1778,28 @@
             s.previousIndex = s.activeIndex || 0;
             s.activeIndex = slideIndex;
         
-            if (translate === s.translate) {
+            if ((s.rtl && -translate === s.translate) || (!s.rtl && translate === s.translate)) {
+                // Update Height
+                if (s.params.autoHeight) {
+                    s.updateAutoHeight();
+                }
                 s.updateClasses();
+                if (s.params.effect !== 'slide') {
+                    s.setWrapperTranslate(translate);
+                }
                 return false;
             }
             s.updateClasses();
             s.onTransitionStart(runCallbacks);
-            var translateX = isH() ? translate : 0, translateY = isH() ? 0 : translate;
+        
             if (speed === 0) {
-                s.setWrapperTransition(0);
                 s.setWrapperTranslate(translate);
+                s.setWrapperTransition(0);
                 s.onTransitionEnd(runCallbacks);
             }
             else {
-                s.setWrapperTransition(speed);
                 s.setWrapperTranslate(translate);
+                s.setWrapperTransition(speed);
                 if (!s.animating) {
                     s.animating = true;
                     s.wrapper.transitionEnd(function () {
@@ -1780,6 +1815,9 @@
         
         s.onTransitionStart = function (runCallbacks) {
             if (typeof runCallbacks === 'undefined') runCallbacks = true;
+            if (s.params.autoHeight) {
+                s.updateAutoHeight();
+            }
             if (s.lazy) s.lazy.onTransitionStart();
             if (runCallbacks) {
                 s.emit('onTransitionStart', s);
@@ -1884,6 +1922,19 @@
             }
         
             s.translate = isH() ? x : y;
+        
+            // Check if we need to update progress
+            var progress;
+            var translatesDiff = s.maxTranslate() - s.minTranslate();
+            if (translatesDiff === 0) {
+                progress = 0;
+            }
+            else {
+                progress = (translate - s.minTranslate()) / (translatesDiff);
+            }
+            if (progress !== s.progress) {
+                s.updateProgress(translate);
+            }
         
             if (updateActiveIndex) s.updateActiveIndex();
             if (s.params.effect !== 'slide' && s.effects[s.params.effect]) {
@@ -2862,9 +2913,11 @@
             }
         }
         s.disableKeyboardControl = function () {
+            s.params.keyboardControl = false;
             $(document).off('keydown', handleKeyboard);
         };
         s.enableKeyboardControl = function () {
+            s.params.keyboardControl = true;
             $(document).on('keydown', handleKeyboard);
         };
         
@@ -2893,13 +2946,14 @@
             if (e.originalEvent) e = e.originalEvent; //jquery fix
             var we = s.mousewheel.event;
             var delta = 0;
+            var rtlFactor = s.rtl ? -1 : 1;
             //Opera & IE
             if (e.detail) delta = -e.detail;
             //WebKits
             else if (we === 'mousewheel') {
                 if (s.params.mousewheelForceToAxis) {
                     if (isH()) {
-                        if (Math.abs(e.wheelDeltaX) > Math.abs(e.wheelDeltaY)) delta = e.wheelDeltaX;
+                        if (Math.abs(e.wheelDeltaX) > Math.abs(e.wheelDeltaY)) delta = e.wheelDeltaX * rtlFactor;
                         else return;
                     }
                     else {
@@ -2908,7 +2962,7 @@
                     }
                 }
                 else {
-                    delta = e.wheelDelta;
+                    delta = Math.abs(e.wheelDeltaX) > Math.abs(e.wheelDeltaY) ? - e.wheelDeltaX * rtlFactor : - e.wheelDeltaY;
                 }
             }
             //Old FireFox
@@ -2917,7 +2971,7 @@
             else if (we === 'wheel') {
                 if (s.params.mousewheelForceToAxis) {
                     if (isH()) {
-                        if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) delta = -e.deltaX;
+                        if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) delta = -e.deltaX * rtlFactor;
                         else return;
                     }
                     else {
@@ -2926,7 +2980,7 @@
                     }
                 }
                 else {
-                    delta = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? - e.deltaX : - e.deltaY;
+                    delta = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? - e.deltaX * rtlFactor : - e.deltaY;
                 }
             }
             if (delta === 0) return;
@@ -2992,6 +3046,7 @@
             s.container.on(s.mousewheel.event, handleMousewheel);
             return true;
         };
+        
 
         /*=========================
           Parallax
@@ -2999,6 +3054,7 @@
         function setParallaxTransform(el, progress) {
             el = $(el);
             var p, pX, pY;
+            var rtlFactor = s.rtl ? -1 : 1;
         
             p = el.attr('data-swiper-parallax') || '0';
             pX = el.attr('data-swiper-parallax-x');
@@ -3017,11 +3073,12 @@
                     pX = '0';
                 }
             }
+        
             if ((pX).indexOf('%') >= 0) {
-                pX = parseInt(pX, 10) * progress + '%';
+                pX = parseInt(pX, 10) * progress * rtlFactor + '%';
             }
             else {
-                pX = pX * progress + 'px' ;
+                pX = pX * progress * rtlFactor + 'px' ;
             }
             if ((pY).indexOf('%') >= 0) {
                 pY = parseInt(pY, 10) * progress + '%';
@@ -3029,6 +3086,7 @@
             else {
                 pY = pY * progress + 'px' ;
             }
+        
             el.transform('translate3d(' + pX + ', ' + pY + ',0px)');
         }
         s.parallax = {
