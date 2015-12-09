@@ -129,7 +129,7 @@ $(document).ready(function () {
       cols: cols,
       alignment: 'vertical',
       verticalDir: 'up',
-      speed: 350,
+      speed: 800,
       height: 480,
       tbPadding: 20,
       lrPadding: 15,
