@@ -9818,7 +9818,7 @@ section .section-title p {
   margin-left: auto;
   margin-right: auto;
   font-size: 20px;
-  font-weight: 100;
+  font-weight: 300;
 }
 section.section-title.light p,
 section .section-title.light p {
@@ -9843,7 +9843,7 @@ section .section-footer p {
   margin-left: auto;
   margin-right: auto;
   font-size: 20px;
-  font-weight: 100;
+  font-weight: 300;
 }
 section.section-title.bg {
   background-color: #f8f8f8;
@@ -10129,15 +10129,24 @@ section.home-clients {
 }
 section.home-clients .at_logo_carousel_calltoaction_block {
   opacity: 1;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.9);
 }
 section.home-clients .at_logo_carousel_calltoaction_block h2 {
-  color: #555555;
+  color: #333333;
   font-size: 22px;
   line-height: 24px;
+  font-size: 24px;
+  font-weight: 700;
+  padding: 0 0 30px 0;
+}
+section.home-clients .at_logo_carousel_calltoaction_block p {
+  margin-bottom: 40px;
+  font-weight: 400;
+  font-size: 16px;
 }
 section.home-clients .at_logo_carousel_calltoaction_block a.btn {
-  border-radius: 23px;
+  border-radius: 50px;
+  padding: 20px 40px;
 }
 section.home-clients ul {
   display: none;
@@ -10149,7 +10158,7 @@ section.home-clients ul {
 }
 @media (min-width: 992px) {
   section.home-clients .at_logo_carousel_calltoaction_block {
-    padding: 50px 50px;
+    padding: 30px 50px 50px 50px;
   }
 }
 @media (max-width: 440px) {
@@ -10187,7 +10196,7 @@ section.explore h3 {
   font-weight: 700;
 }
 section.explore .desc {
-  font-weight: 100;
+  font-weight: 300;
   color: #999;
   padding: 5px 0 10px 0;
 }
@@ -11294,7 +11303,7 @@ section.jointeam .right-col h3 {
   font-size: 32px;
   color: #999999;
   max-width: 430px;
-  font-weight: 100;
+  font-weight: 300;
 }
 section.jointeam .left-col p,
 section.jointeam .right-col p {
