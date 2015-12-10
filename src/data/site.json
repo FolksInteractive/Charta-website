@@ -1,0 +1,58 @@
+{
+  "title": "Charta",
+  "menu_fr": [
+    {
+      "page" : "index"
+    },
+    {
+      "label": "Entreprise",
+      "page" : "entreprise-historique",
+      "items": [
+        {
+          "page" : "entreprise-historique"
+        },
+        {
+          "page" : "entreprise-philosophie"
+        },
+        {
+          "label" : "Avantages",
+          "page" : "entreprise-avantagescharta"
+        },
+        {
+          "page" : "entreprise-equipe"
+        },
+        {
+          "page" : "entreprise-certifications"
+        }
+      ]
+    },
+    {
+      "label": "Réalisations",
+      "page" : "realisation-realisezvosidees",
+      "items": [
+        {
+          "label" : "Réalisez vos idées",
+          "page": "realisation-realisezvosidees"
+        },
+        {
+          "page": "realisation-projets"
+        },
+        {
+          "page": "realisation-gallerie"
+        },
+        {
+          "page": "realisation-temoignages"
+        }
+      ]
+    },
+    {
+      "page" : "nouvelles"
+    },
+    {
+      "page" : "carrieres"
+    },
+    {
+      "page" : "contactez-nous"
+    }
+  ]
+}

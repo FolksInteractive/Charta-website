@@ -11,22 +11,26 @@
         <img src="{{assets}}/images/charta-logo.png">
       </a>
       <div class="navbar-reach">
-        <h4>Entrepreneur général de Montréal en construction commerciale, industrielle et institutionnelle</h6>
+        <h6>Contactez-nous pour plus de détails</h6>
         <phone>514 637-6725</phone>
-        <h6>Contactez-nous pour plus de détails – Licence RBQ n° 1367-3231-71</h6>
       </div>
     </div>
     <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
         <!-- you can exclude pages using \{{#isnt}} helper: \{{#isnt data.title 'Blog'}} -->
-        {{#each pages}}
-          {{#is data.parent 'root'}}
-            <li{{#if this.isCurrentPage}} class="active"{{/if}}>
-              <a href="{{relative dest this.dest}}">{{ data.title }}</a>
-            </li>
-          {{/is}}
+        {{#each site.menu_fr}}
+          <li{{#if this.active}} class="active"{{/if}}>
+            <a href="{{relative dest this.dest}}">{{ this.label }}</a>
+            {{#if this.items}}
+              <ul class="list-unstyled">
+                {{#each this.items}}
+                  <li{{#if this.active}} class="active"{{/if}}><a href="{{relative dest this.dest}}">{{ this.label }}</a></li>
+                {{/each}}
+              </ul>
+            {{/if}}
+          </li>
         {{/each}}
-          <li>
+          {{!-- <li>
             <a href="#">Entreprise</a>
             <ul class="list-unstyled">
               <li><a href="{{relative page.dest "dist/entreprise-historique.html"}}">Historique</a></li>
@@ -46,14 +50,14 @@
             </ul>
           </li>
           <li>
-            <a href="{{relative page.dest "dist/nouvelles.html"}}">Nouvelles</a>
+            <a href="{{relative page.dest "dist/notrs-magasinrona.html"}}">Nouvelles</a>
           </li>
           <li>
-            <a href="{{relative page.dest "dist/carrieres.html"}}">Carrières</a>
+            <a href="{{relative page.dest "dist/charrieres.html"}}">Carrières</a>
           </li>
           <li>
               <a href="{{relative page.dest "dist/contactez-nous.html"}}">Contact</a>
-          </li>
+          </li> --}}
       </ul>
     </div><!--/.nav-collapse -->
   </div>
