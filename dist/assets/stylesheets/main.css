@@ -6180,6 +6180,9 @@ ul {
 a:hover {
   text-decoration: none;
 }
+.btn-send {
+  font-size: 14px;
+}
 .charta-title {
   background-color: #F8F8F8;
   padding: 36px;
@@ -10029,6 +10032,12 @@ section.hero .portfolio-btn {
 .slider-caption .text-right h5 {
   font-weight: 300;
 }
+.realisations {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  z-index: 20;
+}
 .slider-arrow {
   position: absolute;
   cursor: pointer;
@@ -10896,7 +10905,6 @@ section.temoignages .temoignages-title p.title-bold {
 }
 section.temoignages .temoignages-body {
   padding: 0px 0px;
-  max-width: 1280px;
   margin: 0px auto;
 }
 section.temoignages .temoignages-body .temoignages-row {
@@ -10975,6 +10983,7 @@ section.temoignages .temoignages-body .temoignages-row .temoignages-row-desc .de
 }
 section.temoignages .temoignages-body .temoignages-row.odd .temoignages-row-desc {
   padding-left: 550px;
+  padding-right: 80px;
   width: 100%;
 }
 section.temoignages .temoignages-body .temoignages-row.odd .temoignages-row-logo {
@@ -10985,7 +10994,8 @@ section.temoignages .temoignages-body .temoignages-row.even {
   background-color: #f2f2f2;
 }
 section.temoignages .temoignages-body .temoignages-row.even .temoignages-row-desc {
-  padding-right: 550px;
+  padding-right: 580px;
+  padding-left: 80px;
   width: 100%;
 }
 section.temoignages .temoignages-body .temoignages-row.even .temoignages-row-logo {
@@ -11300,7 +11310,15 @@ section.carrieres .carrieres-form-container .carrieres-form .plus {
 }
 section.carrieres .carrieres-form-container .carrieres-form .plus a {
   color: #fff;
-  font-size: 30px;
+}
+section.carrieres .carrieres-form-container .carrieres-form .plus a span {
+  font-size: 22px;
+  line-height: 28px;
+  padding-left: 1px;
+}
+section.carrieres .carrieres-form-container .carrieres-form .plus:hover {
+  background: #333;
+  cursor: pointer;
 }
 section.carrieres .carrieres-form-container .carrieres-form input,
 section.carrieres .carrieres-form-container .carrieres-form select,
