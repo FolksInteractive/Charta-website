@@ -1,6 +1,7 @@
 header.banner{
   color: white;
   height: @banner-height;
+  overflow: hidden;
 
   h1{
     margin: 0;
@@ -20,7 +21,7 @@ header.banner{
   }
 
   h3{    
-    width: 500px;
+    width: 100%;
   }
 
   &.blue{
@@ -36,6 +37,53 @@ header.banner{
 
     height: @banner-height;
     line-height: @banner-height;
-    margin-left: 300px;
+    text-align: right;
+  }
+
+  @media (max-width: @screen-sm-max) {
+    h1{
+      font-size: 30px;
+    }
+
+    h3{
+      font-size: 18px;
+    }
+
+    h4{
+      font-size: 20px;
+    }
+
+    .page-header{
+      margin-left: 100px;
+    }
+  }
+
+  @media (max-width: @screen-xs-max) {
+    h1, h4, h3{
+      text-align: center;
+    }
+
+    h1{
+      font-size: 36px;
+      line-height: normal;
+    }
+
+    h3{
+      font-size: 16px;
+      opacity: .7;
+    }
+
+    h4{
+      margin-top: 40px;
+      font-size: 18px;
+      opacity: .8;
+    }
+
+    .page-header{
+      margin-left: 0;
+      margin-top: 30px;
+      line-height: normal;
+      height: auto;
+    }
   }
 }

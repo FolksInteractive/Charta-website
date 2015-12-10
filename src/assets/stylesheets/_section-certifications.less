@@ -1,9 +1,11 @@
 section.certification {
   padding-top: 50px;
   padding-bottom: 50px;
+
   .certification-row {
     padding-top: 30px;
     padding-bottom: 30px;
+
     .logo {
       text-align: center;
       p{
@@ -13,6 +15,7 @@ section.certification {
         padding-bottom: 5px;
       }
     }
+
     .desc {
       h3 {
         font-size: 20px;
@@ -36,22 +39,12 @@ section.certification {
       }
     }
   }
-}
 
-@media (min-width: 992px) and (max-width: 1199px) {
-  section.certification {
-
-  }
-}
-
-@media (max-width: 991px) {
-  section.certification {
-
-  }
-}
-
-@media (max-width: 767px) {
-  section.certification {
-
+  @media (max-width: @screen-xs-max) {
+    .certification-row {
+      .logo{
+        margin-bottom: 40px;
+      }
+    }
   }
 }

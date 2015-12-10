@@ -9804,6 +9804,7 @@ body {
 header.banner {
   color: white;
   height: 252px;
+  overflow: hidden;
 }
 header.banner h1 {
   margin: 0;
@@ -9820,7 +9821,7 @@ header.banner h4 {
   font-weight: 300;
 }
 header.banner h3 {
-  width: 500px;
+  width: 100%;
 }
 header.banner.blue {
   background-image: url(../images/banner-blued.png);
@@ -9833,7 +9834,47 @@ header.banner .page-header {
   border-bottom: 0;
   height: 252px;
   line-height: 252px;
-  margin-left: 300px;
+  text-align: right;
+}
+@media (max-width: 991px) {
+  header.banner h1 {
+    font-size: 30px;
+  }
+  header.banner h3 {
+    font-size: 18px;
+  }
+  header.banner h4 {
+    font-size: 20px;
+  }
+  header.banner .page-header {
+    margin-left: 100px;
+  }
+}
+@media (max-width: 767px) {
+  header.banner h1,
+  header.banner h4,
+  header.banner h3 {
+    text-align: center;
+  }
+  header.banner h1 {
+    font-size: 36px;
+    line-height: normal;
+  }
+  header.banner h3 {
+    font-size: 16px;
+    opacity: .7;
+  }
+  header.banner h4 {
+    margin-top: 40px;
+    font-size: 18px;
+    opacity: .8;
+  }
+  header.banner .page-header {
+    margin-left: 0;
+    margin-top: 30px;
+    line-height: normal;
+    height: auto;
+  }
 }
 section.section-title,
 section .section-title {
@@ -10635,6 +10676,11 @@ section.certification .certification-row .desc p.certitication-link {
 }
 section.certification .certification-row .desc :first-child {
   margin-top: 0px;
+}
+@media (max-width: 767px) {
+  section.certification .certification-row .logo {
+    margin-bottom: 40px;
+  }
 }
 section.realisationidees {
   margin: 50px 0;
