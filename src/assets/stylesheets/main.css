@@ -6590,7 +6590,7 @@ body {
 .navbar-reach h4 {
   color: #024A91;
   font-size: 13px;
-  max-width: 300px;
+  max-width: 310px;
   margin: 10px 0 5px 0;
 }
 .navbar-reach phone {
@@ -11370,6 +11370,11 @@ section.carrieres .map-container {
     padding-bottom: 20px;
   }
 }
+@media (max-width: 767px) {
+  section.carrieres .carrieres-title p.title-bold {
+    font-size: 30px;
+  }
+}
 section.nouvelles .news-container {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -11498,9 +11503,6 @@ footer a {
 }
 footer a:hover {
   color: #999;
-}
-footer .sitemap-col {
-  max-width: 22%;
 }
 footer .sitemap-col li {
   text-transform: uppercase;
