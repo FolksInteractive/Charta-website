@@ -6579,13 +6579,13 @@ body {
 }
 .navbar-reach {
   float: left;
-  padding: 0 30px;
+  padding: 0 0 0 30px;
   font-size: 18px;
   line-height: 20px;
   height: 100px;
 }
 .navbar-reach h4 {
-  color: #004284 !important;
+  color: #024A91;
   font-size: 15px;
   max-width: 400px;
   margin: 10px 0 5px 0;
