@@ -6621,6 +6621,10 @@ body {
 }
 .navbar-default .navbar-nav > .active > a {
   font-weight: 700;
+  color: #208bc4;
+}
+.navbar-default .navbar-nav > li > ul > .active > a {
+  color: #208bc4;
 }
 .navbar-nav ul.menu-pos-invert,
 .navbar-nav li .mega-menu-content.menu-pos-invert {
@@ -6651,7 +6655,7 @@ body {
   font-size: 14px;
   height: auto !important;
   line-height: 22px !important;
-  color: #666 !important;
+  color: #666;
   border: 0 !important;
   letter-spacing: 0;
   font-family: 'Lato', "Helvetica Neue", Helvetica, Arial, sans-serif;

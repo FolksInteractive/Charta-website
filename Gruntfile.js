@@ -95,9 +95,6 @@ module.exports = function(grunt) {
     // },
 
     assemble: {
-      options: {
-        plugins: [ 'assemble-related-pages']
-      },
       pages: {
         options: {
           flatten: true,
@@ -106,7 +103,7 @@ module.exports = function(grunt) {
           data: '<%= config.src %>/data/*.{json,yml}',
           partials: '<%= config.src %>/templates/partials/*.hbs',
           helpers: '<%= config.src %>/templates/helpers.js',
-          plugins: ['assemble-contrib-permalinks','assemble-contrib-sitemap'],
+          plugins: ['assemble-contrib-permalinks','assemble-contrib-sitemap', './plugins/menu.js'],
         },
         files: {
           '<%= config.dist %>/': ['<%= config.src %>/templates/pages/*.hbs']
