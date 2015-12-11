@@ -6674,8 +6674,31 @@ body {
   }
 }
 @media (max-width: 550px) {
+  .navbar .container-fluid {
+    margin-right: 15px;
+  }
+  .navbar-toggle {
+    margin-right: 0;
+    padding: 10px;
+  }
+  .navbar-brand {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
   .navbar-reach {
+    padding-left: 15px;
+  }
+  .navbar-reach h6 {
     display: none;
+  }
+  .navbar-reach h4 {
+    max-width: 140px;
+    font-size: 12px;
+    margin-top: 10px;
+  }
+  .navbar-reach phone {
+    font-size: 20px;
+    display: block;
   }
 }
 @font-face {
@@ -9997,6 +10020,11 @@ section.hero .portfolio-btn {
   font-size: 16px;
   padding: 10px 20px 14px 20px;
 }
+@media (max-width: 767px) {
+  section.hero .portfolio-btn {
+    margin-top: 0;
+  }
+}
 .slider-over {
   position: absolute;
   top: 0;
@@ -10021,6 +10049,18 @@ section.hero .portfolio-btn {
 .slider-over h1 {
   font-size: 40px;
 }
+@media (max-width: 767px) {
+  .slider-over {
+    width: 70%;
+    margin-left: -35%;
+  }
+  .slider-over h3 {
+    font-size: 16px;
+  }
+  .slider-over h1 {
+    font-size: 20px;
+  }
+}
 .slider-caption {
   position: absolute;
   width: 100%;
@@ -10032,11 +10072,22 @@ section.hero .portfolio-btn {
 .slider-caption .text-right h5 {
   font-weight: 300;
 }
+@media (max-width: 767px) {
+  .slider-caption .row {
+    visibility: hidden;
+  }
+}
 .realisations {
   position: absolute;
   bottom: 30px;
   left: 30px;
+  right: 30px;
   z-index: 20;
+}
+@media (max-width: 767px) {
+  .realisations {
+    text-align: center;
+  }
 }
 .slider-arrow {
   position: absolute;
@@ -10074,6 +10125,11 @@ section.hero .portfolio-btn {
   font-size: 34px;
   text-align: center;
   margin-left: 7px;
+}
+@media (max-width: 767px) {
+  .slider-arrow {
+    display: none;
+  }
 }
 .swiper-container {
   width: 100%;
@@ -10206,11 +10262,11 @@ section.welcome .container-fluid .col-right p {
 }
 section.home-clients {
   background-image: url('/assets/images/hero-bleued.png');
-  height: 480px;
 }
 section.home-clients .at_logo_carousel_calltoaction_block {
   opacity: 1;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 section.home-clients .at_logo_carousel_calltoaction_block h2 {
   color: #333333;
@@ -10219,11 +10275,13 @@ section.home-clients .at_logo_carousel_calltoaction_block h2 {
   font-size: 24px;
   font-weight: 700;
   padding: 0 0 30px 0;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 section.home-clients .at_logo_carousel_calltoaction_block p {
   margin-bottom: 40px;
   font-weight: 400;
   font-size: 16px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 section.home-clients .at_logo_carousel_calltoaction_block a.btn {
   border-radius: 50px;
@@ -10245,10 +10303,25 @@ section.home-clients .at_logo_carousel_calltoaction_container {
     padding: 30px 50px 50px 50px;
   }
 }
-@media (max-width: 440px) {
+@media (max-width: 767px) {
+  section.home-clients .at_logo_carousel_calltoaction_container {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
   section.home-clients .at_logo_carousel_calltoaction_block {
-    width: 95%;
-    max-width: 300px;
+    width: auto;
+    height: 100%;
+    border-radius: 0;
+    background-color: transparent;
+  }
+  section.home-clients .at_logo_carousel_calltoaction_block h2 {
+    font-size: 18px;
+  }
+  section.home-clients .at_logo_carousel_calltoaction_block p {
+    font-size: 14px;
+  }
+  section.home-clients .at_logo_carousel_calltoaction_block a.btn {
+    font-size: 14px;
+    padding: 10px 20px;
   }
 }
 section.home-instagram h2 {
@@ -11564,4 +11637,15 @@ footer .contact-col h1 {
 footer .copyright {
   padding: 30px 0 10px 0;
   color: #999;
+}
+@media (max-width: 991px) {
+  footer {
+    padding-top: 10px;
+  }
+  footer .row {
+    display: none;
+  }
+  footer .copyright {
+    font-size: smaller;
+  }
 }

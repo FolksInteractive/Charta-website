@@ -1,9 +1,12 @@
 section.home-clients{
   background-image: url('/assets/images/hero-bleued.png');
-  height: 480px;
+  // height: 480px;
+
   .at_logo_carousel_calltoaction_block{
     opacity: 1;
-    background-color: rgba(255,255,255,0.9);
+    background-color: transparent;
+    background-color: rgba(0,0,0,0.5);
+
     h2{
       color: #333333;
       font-size: 22px;
@@ -11,11 +14,13 @@ section.home-clients{
       font-size: 24px;
       font-weight: 700;
       padding: 0 0 30px 0;
+      text-shadow: 1px 1px 1px rgba(0,0,0,0.50);
     }
     p {
       margin-bottom: 40px;
       font-weight: 400;
       font-size: 16px;
+      text-shadow: 1px 1px 1px rgba(0,0,0,0.50);
     }
     a.btn{
       border-radius: 50px;
@@ -27,7 +32,7 @@ section.home-clients{
   }
 
   .at_logo_carousel_calltoaction_container {
-    z-index: 10;
+    z-index: 10;    
   }
 }
 
@@ -43,11 +48,29 @@ section.home-clients{
     }
   }
 }
-@media (max-width: 440px) {
+@media (max-width: @screen-xs-max) {
   section.home-clients {
+    .at_logo_carousel_calltoaction_container {
+      background-color: rgba(0,0,0,0.5);
+    }
     .at_logo_carousel_calltoaction_block{
-      width: 95%;
-      max-width: 300px;
+      width: auto;
+      height: 100%;
+      border-radius: 0;
+      background-color: transparent;
+
+      // margin: 20px;
+      //margin: inherit;
+      h2{
+        font-size: 18px;
+      }
+      p{
+        font-size: 14px;
+      }
+      a.btn{
+        font-size: 14px;
+        padding: 10px 20px;
+      }
     }
   }
 }

@@ -5,10 +5,10 @@
     if($("#instagramNewsFeed").length > 0){
       // Instagram Feed  
       var feed = new Instafeed({
-        accessToken: '1706625845.7c96a79.5cded748c4cd4f72a7d9b5deb3a74e55',
-        userId: '1706625845',
-        // accessToken: '2215496639.d52792e.1c38bdfc523e45668120e6a444c7664e',
-        // userId: '2215496639',
+        // accessToken: '1706625845.7c96a79.5cded748c4cd4f72a7d9b5deb3a74e55',
+        // userId: '1706625845',
+        accessToken: '2215496639.d52792e.1c38bdfc523e45668120e6a444c7664e',
+        userId: '2215496639',
         target: 'instagramNewsFeed',
         get: 'user',
         resolution: 'low_resolution',

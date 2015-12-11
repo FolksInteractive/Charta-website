@@ -84,6 +84,7 @@
         paginationClickable: false,
         slidesPerView: 1,
         grabCursor: true,
+        autoplay: 4000
       });
 
       $('#hero .swiper-button-prev').on('click', function (e) {
@@ -101,34 +102,34 @@
     // Instagram Carousel  
     if($("#instagramHomeFeed").length > 0){
       var feed = new Instafeed({
-        accessToken: '1706625845.7c96a79.5cded748c4cd4f72a7d9b5deb3a74e55',
-        userId: '1706625845',
-        // accessToken: '2215496639.d52792e.1c38bdfc523e45668120e6a444c7664e',
-        // userId: '2215496639',
+        // accessToken: '1706625845.7c96a79.5cded748c4cd4f72a7d9b5deb3a74e55',
+        // userId: '1706625845',
+        accessToken: '2215496639.d52792e.1c38bdfc523e45668120e6a444c7664e',
+        userId: '2215496639',
         target: 'instagramHomeFeed',
         get: 'user',
-        resolution: 'low_resolution',
+        resolution: 'standard_resolution',
         limit : 15,
-        template: '<div><a href="{{link}}"><img src="{{image}}" /></a></div>',
-        success : function(){
-          setTimeout(function(){
-            $('#homeInstagram .owl-carousel').owlCarousel({
-              margin: 20,
-              nav: true,
-              navText: ['<i class="icon-angle-left"></i>', '<i class="icon-angle-right"></i>'],
-              autoplay: false,
-              autoplayHoverPause: true,
-              dots: false,
-              navRewind: false,
-              responsive: {
-                0: {items: 3},
-                600: {items: 4},
-                1000: {items: 5},
-                1200: {items: 6}
-              }
-            });
+        template: '<div><a href="{{image}}"><img src="{{image}}" /></a></div>',
+        after : function(){
+          // Initialize Carousel
+          $('#homeInstagram .owl-carousel').owlCarousel({
+            items : 5,
+            itemsCustom : false,
+            itemsDesktop : [1199,5],
+            itemsDesktopSmall : [980,4],
+            itemsTablet: [768,3],
+            itemsTabletSmall: false,
+            itemsMobile : [479, 3],
+            singleItem : false,
+            itemsScaleUp : false,
+            margin: 20,
+          });
+
+          // Initialize Fancybox
+          $('#homeInstagram .owl-item a').fancybox({
+            padding: 0
           })
-          
         }
       });
       feed.run();

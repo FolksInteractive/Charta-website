@@ -15,6 +15,12 @@ section.hero {
     font-size: 16px;
     padding: 10px 20px 14px 20px;
   }
+
+  @media(max-width: @screen-xs-max){
+    .portfolio-btn{
+      margin-top: 0;
+    }
+  }
 }
 
 
@@ -46,6 +52,18 @@ section.hero {
   .animation-delay(500ms);
 
   z-index: 20;
+
+  @media(max-width: @screen-xs-max){
+    width: 70%;
+    margin-left: -35%;
+
+    h3 {
+      font-size: 16px;
+    }
+    h1{
+      font-size: 20px;
+    }
+  }
 }
 // Slider Caption
 .slider-caption{
@@ -61,13 +79,24 @@ section.hero {
       font-weight: 300;
     }
   }
+
+  @media(max-width: @screen-xs-max){
+    .row{
+      visibility: hidden;
+    }
+  }
 }
 
 .realisations {
   position: absolute;
   bottom: 30px;
   left: 30px;
+  right: 30px;
   z-index: 20;
+
+  @media(max-width: @screen-xs-max){
+    text-align: center;
+  }
 }
 
 // Slider Arrows
@@ -109,6 +138,10 @@ section.hero {
     font-size: 34px;
     text-align: center;
     margin-left: 7px;
+  }
+
+  @media(max-width: @screen-xs-max){
+    display: none;
   }
 }
 
