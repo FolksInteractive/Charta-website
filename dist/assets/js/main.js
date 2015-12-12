@@ -11,6 +11,8 @@
       pathClass : 'current'
     });
 
+    $('.fancybox').fancybox();
+
     $('.selectpicker').selectpicker();
   });
 
