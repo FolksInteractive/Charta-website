@@ -10053,12 +10053,13 @@ section.hero .portfolio-btn {
   .slider-over {
     width: 70%;
     margin-left: -35%;
+    top: 30%;
   }
   .slider-over h3 {
     font-size: 16px;
   }
   .slider-over h1 {
-    font-size: 20px;
+    font-size: 28px;
   }
 }
 .slider-caption {
@@ -10073,8 +10074,8 @@ section.hero .portfolio-btn {
   font-weight: 300;
 }
 @media (max-width: 767px) {
-  .slider-caption .row {
-    visibility: hidden;
+  .slider-caption {
+    display: none;
   }
 }
 .realisations {
@@ -10266,7 +10267,8 @@ section.home-clients {
 section.home-clients .at_logo_carousel_calltoaction_block {
   opacity: 1;
   background-color: transparent;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(35, 59, 77, 0.95);
+  border-radius: 0 80px 0 80px;
 }
 section.home-clients .at_logo_carousel_calltoaction_block h2 {
   color: #333333;
@@ -10275,13 +10277,11 @@ section.home-clients .at_logo_carousel_calltoaction_block h2 {
   font-size: 24px;
   font-weight: 700;
   padding: 0 0 30px 0;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 section.home-clients .at_logo_carousel_calltoaction_block p {
   margin-bottom: 40px;
   font-weight: 400;
   font-size: 16px;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 section.home-clients .at_logo_carousel_calltoaction_block a.btn {
   border-radius: 50px;
@@ -10305,7 +10305,7 @@ section.home-clients .at_logo_carousel_calltoaction_container {
 }
 @media (max-width: 767px) {
   section.home-clients .at_logo_carousel_calltoaction_container {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(35, 59, 77, 0.85);
   }
   section.home-clients .at_logo_carousel_calltoaction_block {
     width: auto;
@@ -10314,14 +10314,14 @@ section.home-clients .at_logo_carousel_calltoaction_container {
     background-color: transparent;
   }
   section.home-clients .at_logo_carousel_calltoaction_block h2 {
-    font-size: 18px;
+    font-size: 22px;
   }
   section.home-clients .at_logo_carousel_calltoaction_block p {
     font-size: 14px;
   }
   section.home-clients .at_logo_carousel_calltoaction_block a.btn {
     font-size: 14px;
-    padding: 10px 20px;
+    padding: 20px 30px;
   }
 }
 section.home-instagram h2 {
