@@ -1,6 +1,5 @@
+var endpointUrl = "http://secondhandboards.com/sdw/sentmail/sendmail.php";
 (function($) {
-  var endpointUrl = "http://secondhandboards.com/sdw/sentmail/sendmail.php";
-
   $(document).ready(function(){
     var $window = $(window);
     var $body = $('body');

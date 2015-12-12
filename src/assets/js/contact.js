@@ -42,18 +42,32 @@
         }
       })
 
-      if(formValid == true){
+      if(formValid == true) {
         var data = $("form.carrieres-form").serializeArray();
         $("#sent").addClass("loading").addClass("disabled").attr("disabled", "disabled")
-        $.post(endpointUrl, data, function(result){
-          $("form.carrieres-form .alert").removeClass("alert-danger").addClass("alert-success").html(result);
-          $("#sent").removeClass("loading").removeClass("disabled").removeAttr("disabled");
-          $("form.carrieres-form .messagebox").show(200);
-        }).error(function(response){
-          $("form.carrieres-form .alert").removeClass("alert-success").addClass("alert-danger").html(response.responseText);
-          $("form.carrieres-form .messagebox").show(200);
-          $("#sent").removeClass("loading").removeClass("disabled").removeAttr("disabled");
+
+        var formData = new FormData($("form.carrieres-form")[0]);
+
+        $.ajax({
+          url: endpointUrl,
+          type: 'POST',
+          data: formData,
+          async: false,
+          success: function (result) {
+            $("form.carrieres-form .alert").removeClass("alert-danger").addClass("alert-success").html(result);
+            $("#sent").removeClass("loading").removeClass("disabled").removeAttr("disabled");
+            $("form.carrieres-form .messagebox").show(200);
+          },
+          error: function (response) {
+            $("form.carrieres-form .alert").removeClass("alert-success").addClass("alert-danger").html(response.responseText);
+            $("form.carrieres-form .messagebox").show(200);
+            $("#sent").removeClass("loading").removeClass("disabled").removeAttr("disabled");
+          },
+          cache: false,
+          contentType: false,
+          processData: false
         });
+
       }
     })
   });

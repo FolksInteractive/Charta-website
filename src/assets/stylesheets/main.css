@@ -11380,6 +11380,7 @@ section.carrieres .carrieres-form-container .carrieres-form .plus {
   line-height: 30px;
   border-radius: 15px;
   margin-top: 15px;
+  position: relative;
 }
 section.carrieres .carrieres-form-container .carrieres-form .plus a {
   color: #fff;
@@ -11392,6 +11393,13 @@ section.carrieres .carrieres-form-container .carrieres-form .plus a span {
 section.carrieres .carrieres-form-container .carrieres-form .plus:hover {
   background: #333;
   cursor: pointer;
+}
+section.carrieres .carrieres-form-container .carrieres-form .plus input {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
 }
 section.carrieres .carrieres-form-container .carrieres-form input,
 section.carrieres .carrieres-form-container .carrieres-form select,

@@ -45,7 +45,7 @@ lang: fr
         </div>
     </div>
     <div class="container carrieres-form-container">
-        <form class="carrieres-form">
+        <form class="carrieres-form"  enctype="multipart/form-data" action="">
           <div class="row form-label">
               <p class="col-md-12">
                   Envoyez-nous un courriel
@@ -72,13 +72,16 @@ lang: fr
               <div class="col-md-6 col-sm-6 col-xs-10">
                   <div class="form-group">
                     <label class="label" for="vitea">CURRICULUM VITEA *</label>
-                    <input type="text" id="vitea" name="vitea" placeholder="" required/>
+                    <input type="text" id="vitea" name="vitea" placeholder="" value="" required/>
                   </div>
               </div>
               <div class="col-md-1 col-sm-1 col-xs-2">
                   <div class="form-group">
                     <label class="label" for="vitea">&nbsp;</label>
-                    <div class="plus"><a href="#"><span>+</span></a></div>
+                    <div class="plus">
+                        <a href="#"><span>+</span></a>
+                        <input type="file" name="csv_file" id="csv_file" accept="application/pdf"/>
+                    </div>
                   </div>
               </div>
           </div>
@@ -86,13 +89,13 @@ lang: fr
               <div class="col-md-4 col-sm-4">
                   <div class="form-group">
                     <label class="label" for="name">NOM *</label>
-                    <input type="text" id="name" name="contact_name" placeholder="" required/>
+                    <input type="text" id="name" name="contact_name" value="" placeholder="" required/>
                   </div>
               </div>
               <div class="col-md-5 col-sm-5">
                   <div class="form-group">
                     <label class="label" for="email">COURRIEL *</label>
-                    <input type="email" id="name" name="contact_email" placeholder="" required/>
+                    <input type="email" id="name" name="contact_email" value="" placeholder="" required/>
                   </div>
               </div>
               <div class="col-md-3 col-sm-3">
