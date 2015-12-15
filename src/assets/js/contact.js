@@ -21,6 +21,21 @@
     });
 
 
+    $(".remove_file").click(function(event){
+      $("#csv_file").val("");
+      $(".csv_file_name").hide();
+      event.stopPropagation();
+      event.preventDefault();
+    })
+
+    $("#csv_file").change(function(){
+      var fileInput = $(this).val();
+      var fileName = fileInput.split(/(\\|\/)/g).pop();
+      $(".file_name").text(fileName.substr(0,10));
+      $(".csv_file_name").show();
+
+    })
+
     $("#sent").bind("click", function(e){
       var formValid = true;
       var j = 0;
