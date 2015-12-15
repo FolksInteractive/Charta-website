@@ -6609,6 +6609,27 @@ body {
   color: #999;
   padding-top: 5px;
 }
+.over-menu {
+  position: absolute;
+  top: 0;
+  right: 36px;
+  z-index: 30;
+}
+.over-menu .menu-item {
+  display: inline-block;
+  background: #f2f2f2;
+  font-size: 10px;
+  margin-right: 5px;
+  text-transform: uppercase;
+  padding: 4px 15px 6px 15px;
+  border-radius: 0 0 4px 4px;
+}
+.over-menu .menu-item a {
+  color: #999;
+}
+.over-menu .menu-item a:hover {
+  color: #208bc4;
+}
 .navbar-default {
   border-bottom: 1px solid #eee;
 }
@@ -10604,6 +10625,9 @@ section.philosophie .philosophie-body .right-col {
     margin-bottom: 30px;
   }
 }
+section.advantagescharta .charta-container {
+  margin-bottom: 30px;
+}
 section.advantagescharta .advantage-item {
   position: relative;
 }
@@ -10632,7 +10656,7 @@ section.advantagescharta .advantage-item .advantage-item-step .divider {
   position: absolute;
   left: 19.5px;
   width: 1px;
-  top: 45px;
+  top: 55px;
   bottom: 0px;
   border-left: 1px dashed #CCC;
 }
@@ -11157,7 +11181,7 @@ section.notrerona .notrerona-tilte {
 }
 section.notrerona .notrerona-tilte p {
   font-size: 20px;
-  font-weight: 100;
+  font-weight: 300;
   max-width: 750px;
   margin-left: auto;
   margin-right: auto;
@@ -11213,10 +11237,12 @@ section.notrerona .rona-facebook .rona-content p {
   line-height: 18px;
   margin-bottom: 10px;
 }
-section.notrerona .rona-facebook .rona-content button {
+section.notrerona .rona-facebook .rona-content a.btn {
   margin-top: 30px;
   background-color: #208bc4;
-  border-radius: 37px;
+  border-radius: 40px;
+  font-size: 16px;
+  padding-right: 40px;
 }
 @media (max-width: 991px) {
   section.notrerona .rona-facebook {
@@ -11249,11 +11275,13 @@ section#rona-timeline .section-footer .timeline-footer-title {
   font-size: 32px;
   color: #999999;
   line-height: 38px;
+  margin-top: 40px;
 }
 section#rona-timeline .section-footer p {
   font-size: 20px;
   color: #555555;
   line-height: 23px;
+  font-weight: 300;
 }
 section.plandusite {
   padding-top: 50px;
@@ -11263,6 +11291,10 @@ section.plandusite .plandusite-container {
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
+}
+section.plandusite .plandusite-container .charta-list h2 {
+  font-size: 16px;
+  margin-top: 14px;
 }
 section.plandusite .plandusite-container .charta-list ul {
   margin-left: 0px;
@@ -11482,12 +11514,14 @@ section.nouvelles .news-item .news-body span {
   font-size: 14px;
   color: #ccc;
   padding-left: 2px;
+  font-weight: 400;
 }
 section.nouvelles .news-item .news-body p {
   font-weight: lighter;
   padding-top: 5px;
   font-size: 16px;
   line-height: normal;
+  font-weight: 400;
 }
 @media (max-width: 767px) {
   section.nouvelles .news-item.thumbnail {

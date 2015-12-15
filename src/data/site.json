@@ -28,11 +28,11 @@
     },
     {
       "label": "Réalisations",
-      "page" : "realisation-realisezvosidees",
+      "page" : "realisation-realisez-vos-idees",
       "items": [
         {
           "label" : "Réalisez vos idées",
-          "page": "realisation-realisezvosidees"
+          "page": "realisation-realisez-vos-idees"
         },
         {
           "page": "realisation-projets"
