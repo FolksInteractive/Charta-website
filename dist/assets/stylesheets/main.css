@@ -11433,21 +11433,14 @@ section.carrieres .carrieres-form-container .carrieres-form .plus input {
   height: 100%;
   opacity: 0;
 }
-section.carrieres .carrieres-form-container .carrieres-form .csv_file_name {
-  position: absolute;
+section.carrieres .carrieres-form-container .carrieres-form a.remove_file {
+  position: relative;
+  display: block;
+  margin-bottom: -20px;
+  top: -34px;
+  float: right;
+  left: -10px;
   display: none;
-  left: 50px;
-  width: 100px;
-  bottom: 18px;
-  text-overflow: ellipsis;
-}
-section.carrieres .carrieres-form-container .carrieres-form .csv_file_name .file_item {
-  max-width: 100px;
-  display: inline-block;
-  background-color: #EEE;
-  border-radius: 15px;
-  padding-left: 4px;
-  padding-right: 5px;
 }
 section.carrieres .carrieres-form-container .carrieres-form input,
 section.carrieres .carrieres-form-container .carrieres-form select,

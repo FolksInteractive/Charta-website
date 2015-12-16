@@ -23,17 +23,22 @@
 
     $(".remove_file").click(function(event){
       $("#csv_file").val("");
-      $(".csv_file_name").hide();
+      $("#vitea").val("");
+      $(".remove_file").hide();
       event.stopPropagation();
       event.preventDefault();
     })
 
+    $("#vitea").click(function(){
+      $("#csv_file").trigger("click");
+    })
     $("#csv_file").change(function(){
       var fileInput = $(this).val();
       var fileName = fileInput.split(/(\\|\/)/g).pop();
-      $(".file_name").text(fileName.substr(0,10));
-      $(".csv_file_name").show();
-
+      if(fileName){
+        $("#vitea").val(fileName);
+        $(".remove_file").show();
+      }
     })
 
     $("#sent").bind("click", function(e){
