@@ -8,7 +8,7 @@
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="{{relative page.dest "dist/index.html"}}">
-        <img src="{{assets}}/images/charta-logo.png">
+        <img src="{{assets}}/images/charta-logo.jpg" width="56" height="68" />
       </a>
       <div class="navbar-reach">
         <h4>Entrepreneur général de Montréal en construction commerciale, industrielle et institutionnelle</h4>
@@ -22,7 +22,6 @@
         <div class="menu-item"><a href="#">English</a></div>
       </div>
       <ul class="nav navbar-nav navbar-right">
-        <!-- you can exclude pages using \{{#isnt}} helper: \{{#isnt data.title 'Blog'}} -->
         {{#each site.menu_fr}}
           <li{{#if this.active}} class="active"{{/if}}>
             <a href="{{relative dest this.dest}}">{{ this.label }}</a>
@@ -35,34 +34,6 @@
             {{/if}}
           </li>
         {{/each}}
-          {{!-- <li>
-            <a href="{{relative page.dest "dist/entreprise-historique.html"}}">Entreprise</a>
-            <ul class="list-unstyled">
-              <li><a href="{{relative page.dest "dist/entreprise-historique.html"}}">Historique</a></li>
-              <li><a href="{{relative page.dest "dist/entreprise-philosophie.html"}}">Philosophie</a></li>
-              <li><a href="{{relative page.dest "dist/entreprise-avantagescharta.html"}}">Avantages Charta</a></li>
-              <li><a href="{{relative page.dest "dist/entreprise-equipe.html"}}">Équipe</a></li>
-              <li><a href="{{relative page.dest "dist/entreprise-certifications.html"}}">Certifications</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="{{relative page.dest "dist/realisation-realisez-vos-idees.html"}}">Réalisation</a>
-            <ul class="list-unstyled">
-              <li><a href="{{relative page.dest "dist/realisation-realisez-vos-idees.html"}}">Réalisez vos idées</a></li>
-              <li><a href="{{relative page.dest "dist/realisation-projets.html"}}">Projets</a></li>
-              <li><a href="{{relative page.dest "dist/realisation-gallerie.html"}}">Gallerie photo</a></li>
-              <li><a href="{{relative page.dest "dist/realisation-temoignages.html"}}">Témoignages</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="{{relative page.dest "dist/nouvelles.html"}}">Nouvelles</a>
-          </li>
-          <li>
-            <a href="{{relative page.dest "dist/carrieres.html"}}">Carrières</a>
-          </li>
-          <li>
-              <a href="{{relative page.dest "dist/contactez-nous.html"}}">Contact</a>
-          </li> --}}
       </ul>
     </div><!--/.nav-collapse -->
   </div>

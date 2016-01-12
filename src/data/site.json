@@ -1,5 +1,5 @@
 {
-  "title": "Charta",
+  "title": "Entrepreneur général de Montréal en construction commerciale, industrielle et institutionnelle",
   "menu_fr": [
     {
       "page" : "index"
@@ -15,7 +15,6 @@
           "page" : "entreprise-philosophie"
         },
         {
-          "label" : "Avantages",
           "page" : "entreprise-avantagescharta"
         },
         {
@@ -31,14 +30,13 @@
       "page" : "realisation-realisez-vos-idees",
       "items": [
         {
-          "label" : "Réalisez vos idées",
           "page": "realisation-realisez-vos-idees"
         },
         {
           "page": "realisation-projets"
         },
         {
-          "page": "realisation-gallerie"
+          "page": "realisation-galerie"
         },
         {
           "page": "realisation-temoignages"
