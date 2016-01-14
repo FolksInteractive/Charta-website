@@ -11404,6 +11404,9 @@ section.carrieres .carrieres-form-container .carrieres-form .btn-group.bootstrap
 section.carrieres .carrieres-form-container .carrieres-form .row {
   padding-bottom: 20px;
 }
+section.carrieres .carrieres-form-container .carrieres-form #csv_file:hover {
+  cursor: pointer;
+}
 section.carrieres .carrieres-form-container .carrieres-form .plus {
   background-color: #777;
   width: 30px;
