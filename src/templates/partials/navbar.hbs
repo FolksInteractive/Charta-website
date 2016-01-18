@@ -17,9 +17,9 @@
       </div>
     </div>
     <div class="navbar-collapse collapse">
-      <div class="over-menu">
-        <div class="menu-item"><a href="#">Espace sous-traitants</a></div>
-        <div class="menu-item"><a href="#">English</a></div>
+      <div class="over-menu hidden-sm hidden-xs">
+        <div class="menu-item"><a href="https://charta.mod.bz">Espace sous-traitants</a></div>
+        <div class="menu-item"><a href="{{ref-en}}.html">English</a></div>
       </div>
       <ul class="nav navbar-nav navbar-right">
         {{#each site.menu_fr}}
@@ -34,6 +34,8 @@
             {{/if}}
           </li>
         {{/each}}
+        <li class="hidden-md hidden-lg"><a href="https://charta.mod.bz">Espace sous-traitants</a></li>
+        <li class="hidden-md hidden-lg"><a href="{{ref-en}}.html">English</a></li>
       </ul>
     </div><!--/.nav-collapse -->
   </div>

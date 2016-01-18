@@ -69,7 +69,7 @@
         var formData = new FormData($("form.carrieres-form")[0]);
 
         $.ajax({
-          url: endpointUrl,
+          url: "http://secondhandboards.com/sdw/sentmail/sendmail.php",
           type: 'POST',
           data: formData,
           async: false,

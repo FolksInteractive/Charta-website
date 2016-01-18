@@ -7,7 +7,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="{{relative page.dest "dist/index.html"}}">
+      <a class="navbar-brand" href="{{relative page.dest "dist/index-en.html"}}">
         <img src="{{assets}}/images/charta-logo.jpg" width="56" height="68" />
       </a>
       <div class="navbar-reach">
@@ -17,9 +17,9 @@
       </div>
     </div>
     <div class="navbar-collapse collapse">
-      <div class="over-menu">
-        <div class="menu-item"><a href="#">Contractor Area</a></div>
-        <div class="menu-item"><a href="#">Français</a></div>
+      <div class="over-menu hidden-sm hidden-xs">
+        <div class="menu-item"><a href="https://charta.mod.bz">Contractor Area</a></div>
+        <div class="menu-item"><a href="{{ref-fr}}.html">Français</a></div>
       </div>
       <ul class="nav navbar-nav navbar-right">
         {{#each site.menu_en}}
@@ -34,6 +34,9 @@
             {{/if}}
           </li>
         {{/each}}
+
+        <li class="hidden-md hidden-lg"><a href="https://charta.mod.bz">Contractor Area</a></li>
+        <li class="hidden-md hidden-lg"><a href="{{ref-fr}}.html">Français</a></li>
       </ul>
     </div><!--/.nav-collapse -->
   </div>

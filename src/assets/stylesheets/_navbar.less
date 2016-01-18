@@ -142,11 +142,29 @@
     }
   }
 }
+
 @media (min-width: 767px) and (max-width: 1110px) {
   .navbar-reach{
     display: none;
   }
 }
+
+@media (max-width: 767px) {
+  .navbar-nav{
+    ul{
+      position: static;
+      width: 100%;
+      border-top: 0;
+      box-shadow: none;
+      margin-left: 30px;
+
+      a {
+        font-size: 12px;
+      }
+    }
+  }
+}
+
 @media (max-width: 550px){
   .navbar .container-fluid{
     margin-right: 15px;
