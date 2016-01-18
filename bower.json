@@ -12,7 +12,8 @@
     "jquery.debouncedresize": "~1.0.1",
     "instafeed.js": "~1.4.1",
     "moment": "~2.10.6",
-    "fancybox": "~2.1.5"
+    "fancybox": "~2.1.5",
+    "jrespond": "*"
   },
   "private": true
 }
