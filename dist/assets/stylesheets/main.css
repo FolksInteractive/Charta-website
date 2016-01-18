@@ -11330,13 +11330,14 @@ section.carrieres .carrieres-view .carrieres-img .carrieres-img-label {
   height: 100%;
   background: rgba(0, 0, 0, 0.1);
 }
-section.carrieres .carrieres-view .carrieres-img .carrieres-img-label .label-cotainer {
+section.carrieres .carrieres-view .carrieres-img .carrieres-img-label .label-container {
   width: 100%;
   height: 100%;
   display: table;
   text-align: center;
+  background: #fff;
 }
-section.carrieres .carrieres-view .carrieres-img .carrieres-img-label .label-cotainer p {
+section.carrieres .carrieres-view .carrieres-img .carrieres-img-label .label-container p {
   display: table-cell;
   vertical-align: middle;
   font-size: 24px;
