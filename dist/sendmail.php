@@ -7,7 +7,7 @@ require_once('phpmailer/class.phpmailer.php');
 $mail = new PHPMailer();
 $mail->CharSet = 'UTF-8';
 $mail->SetFrom("website@charta.ca", "Charta.ca");
-$mail->AddAddress("fpoirier@gmail.com");
+$mail->AddAddress("ychartier@charta.ca");
 
 if( $_SERVER['REQUEST_METHOD'] == 'POST' && isset($_GET['action'])) {
     if($_GET['action'] == 'career')
