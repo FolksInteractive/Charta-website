@@ -3,7 +3,6 @@ title: Contact-us
 lang: en
 ref-fr: contactez-nous
 ---
-<script src="{{assets}}/js/contact.js"></script>
 
 {{>banner-en}}
 
@@ -14,23 +13,26 @@ ref-fr: contactez-nous
     <div class="container">
         <div class="row">
             <div class="col-md-8 carrieres-form-container">
-                <form class="carrieres-form">
+                <form action="/sendmail.php?action=contact" class="carrieres-form">
                     <div class="row form-label">
                         <p class="col-md-12">
                             Send us an email
                         </p>
                     </div>
-                    <div class="row messagebox">
-                          <div class="col-md-12 alert alert-success" role="alert"></div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="alert alert-success" role="alert">Your message was send successfully. We will contact your shortly.</div>
+                            <div class="alert alert-danger" role="alert">Something went wrong. Please contact us directly or try again later.</div>
+                        </div>
                     </div>
                     <div class="row">
                         <div class="col-md-7 col-sm-7 col-xs-12">
                             <div class="form-group">
                                 <label class="label" for="toaddress">WHO WOULD YOU LIKE TO CONTACT *</label>
                                 <select class="selectpicker" id="toaddress" name="toaddress" required>
-                                    <option value="info@charta.ca">General Inquiries / Projects (info@charta.ca)</option>
-                                    <option value="secretariat@charta.ca">Administration (secretariat@charta.ca)</option>
-                                    <option value="comptabilite@charta.ca">Accounting (comptabilite@charta.ca)</option>
+                                    <option value="info">General Inquiries / Projects (info@charta.ca)</option>
+                                    <option value="secretariat">Administration (secretariat@charta.ca)</option>
+                                    <option value="comptabilite">Accounting (comptabilite@charta.ca)</option>
                                 </select>
                             </div>
                         </div>
@@ -70,6 +72,12 @@ ref-fr: contactez-nous
                                     SEND<span class="loading-icon">&nbsp;&nbsp;&nbsp;<i class="spin glyphicon glyphicon-refresh"></i></span>
                                 </button>
                             </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                          <div class="alert alert-success" role="alert">Votre message a été envoyée avec succès. Nous vous contacterons sous peu. Merci.</div>
+                          <div class="alert alert-danger" role="alert">Un problème est survenu. Veuillez nous contacter directement ou réessayer plus tard. Merci.</div>
                         </div>
                     </div>
                 </form>

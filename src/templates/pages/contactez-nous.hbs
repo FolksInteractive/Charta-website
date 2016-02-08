@@ -3,8 +3,6 @@ title: Contactez-Nous
 lang: fr
 ref-en: contact-us
 ---
-<script src="{{assets}}/js/contact.js"></script>
-
 {{>banner}}
 
 <section id="contact" class="carrieres">
@@ -14,23 +12,20 @@ ref-en: contact-us
     <div class="container">
         <div class="row">
             <div class="col-md-8 carrieres-form-container">
-                <form class="carrieres-form">
+                <form action="/sendmail.php?action=contact" class="carrieres-form">
                     <div class="row form-label">
                         <p class="col-md-12">
                             Envoyez-nous un courriel
                         </p>
-                    </div>
-                    <div class="row messagebox">
-                          <div class="col-md-12 alert alert-success" role="alert"></div>
                     </div>
                     <div class="row">
                         <div class="col-md-7 col-sm-7 col-xs-12">
                             <div class="form-group">
                                 <label class="label" for="toaddress">VOUS DÉSIREZ VOUS ADRESSER À : *</label>
                                 <select class="selectpicker" id="toaddress" name="toaddress" required>
-                                    <option value="info@charta.ca">Général / projets (info@charta.ca)</option>
-                                    <option value="secretariat@charta.ca">Administration (secretariat@charta.ca)</option>
-                                    <option value="comptabilite@charta.ca">Comptabilité (comptabilite@charta.ca)</option>
+                                    <option value="info">Général / projets (info@charta.ca)</option>
+                                    <option value="secretariat">Administration (secretariat@charta.ca)</option>
+                                    <option value="comptabilite">Comptabilité (comptabilite@charta.ca)</option>
                                 </select>
                             </div>
                         </div>
@@ -70,6 +65,12 @@ ref-en: contact-us
                                     ENVOYER<span class="loading-icon">&nbsp;&nbsp;&nbsp;<i class="spin glyphicon glyphicon-refresh"></i></span>
                                 </button>
                             </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                          <div class="alert alert-success" role="alert">Votre message a été envoyée avec succès. Nous vous contacterons sous peu. Merci.</div>
+                          <div class="alert alert-danger" role="alert">Un problème est survenu. Veuillez nous contacter directement ou réessayer plus tard. Merci.</div>
                         </div>
                     </div>
                 </form>

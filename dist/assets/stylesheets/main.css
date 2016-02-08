@@ -11429,7 +11429,7 @@ section.carrieres .carrieres-form-container .carrieres-form .plus {
   text-align: center;
   line-height: 30px;
   border-radius: 15px;
-  margin-top: 15px;
+  margin-top: 35px;
   position: relative;
 }
 section.carrieres .carrieres-form-container .carrieres-form .plus a {
@@ -11480,7 +11480,7 @@ section.carrieres .carrieres-form-container .carrieres-form button.btn .loading-
 section.carrieres .carrieres-form-container .carrieres-form button.btn.loading .loading-icon {
   display: inline;
 }
-section.carrieres .carrieres-form-container .carrieres-form .messagebox {
+section.carrieres .carrieres-form-container .carrieres-form .alert {
   display: none;
 }
 section.carrieres .contact-sidebar {

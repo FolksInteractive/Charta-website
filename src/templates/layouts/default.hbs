@@ -58,7 +58,12 @@
 
     {{> body }}
 
-    {{> footer}}
+
+    {{#is lang 'fr'}}
+        {{> footer }}
+    {{else}}
+        {{> footer-en }}    
+    {{/is}}
     <script src="//localhost:1025/livereload.js"></script>
   </body>
 </html>

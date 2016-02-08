@@ -44,7 +44,12 @@
     $("#sent").bind("click", function(e){
       var formValid = true;
       var j = 0;
-      $("form.carrieres-form").find("input,select,button,textarea").removeClass("invalid").removeClass("badInput").removeClass("valueMissing").removeClass("typeMismatch");
+      $("form.carrieres-form")
+        .find("input,select,button,textarea")
+        .removeClass("invalid")
+        .removeClass("badInput")
+        .removeClass("valueMissing")
+        .removeClass("typeMismatch");
 
       $("form.carrieres-form").find("input,select,textarea").each(function(){
         var ele = $(this).get(0);
@@ -69,19 +74,23 @@
         var formData = new FormData($("form.carrieres-form")[0]);
 
         $.ajax({
-          url: "http://secondhandboards.com/sdw/sentmail/sendmail.php",
+          url: $("form.carrieres-form").attr('action'),
           type: 'POST',
           data: formData,
           async: false,
           success: function (result) {
-            $("form.carrieres-form .alert").removeClass("alert-danger").addClass("alert-success").html(result);
+            $("form.carrieres-form .alert-success").show();
             $("#sent").removeClass("loading").removeClass("disabled").removeAttr("disabled");
-            $("form.carrieres-form .messagebox").show(200);
+            $("form.carrieres-form")[0].reset();
           },
           error: function (response) {
-            $("form.carrieres-form .alert").removeClass("alert-success").addClass("alert-danger").html(response.responseText);
-            $("form.carrieres-form .messagebox").show(200);
-            $("#sent").removeClass("loading").removeClass("disabled").removeAttr("disabled");
+
+            $("form.carrieres-form .alert-danger").show()
+
+            $("#sent")
+              .removeClass("loading")
+              .removeClass("disabled")
+              .removeAttr("disabled");
           },
           cache: false,
           contentType: false,
